@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geetest Verification</title>
+    <script src="https://static.geetest.com/static/tools/gt.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #captcha {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+<div id="captcha"></div>
+<script>
+    var handlerEmbed = function (captchaObj) {
+        captchaObj.appendTo("#captcha");
+        captchaObj.onSuccess(function () {
+            var result = captchaObj.getValidate();
+            if (result) {
+                console.log("Geetest validate:", result.geetest_validate);
+
+                // 发送验证结果到后端服务器
+                fetch('/verify-geetest', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        geetest_challenge: result.geetest_challenge,
+                        geetest_validate: result.geetest_validate,
+                        geetest_seccode: result.geetest_seccode
+                    })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === 'success') {
+                            console.log('Validation successful:', data);
+                            // 处理成功逻辑
+                        } else {
+                            console.log('Validation failed:', data);
+                            // 处理失败逻辑
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }
+        });
+    };
+
+    fetch("/init-geetest")
+        .then(response => response.json())
+        .then(data => {
+            initGeetest({
+                gt: data.gt,
+                challenge: data.challenge,
+                offline: !data.success,
+                new_captcha: data.new_captcha
+            }, handlerEmbed);
+        });
+</script>
+</body>
+</html>
