@@ -8,10 +8,10 @@
 
 ## 项目说明
 
-<h2>**本项目仅供学习使用，仅供学习参考，请勿用于非法用途**</h2>
+<h2>本项目仅供学习使用，仅供学习参考，请勿用于非法用途</h2>
 本项目包含获取stoken等参数，获取原神和绝区零（国服）的抽卡记录，获取米游社相关（游戏体力，每日任务（签到），获取文章等）  
 有关验证码自动过码请参考项目[luguoyixiazi/test_nine](https://github.com/luguoyixiazi/test_nine)
-，同时将[此处方法 getPassChallenge](src/main/java/com/muxiao/bbs_daily.java#L196)
+，同时将[此处方法 getPassChallenge](https://github.com/MuxiaoWF/mi-Tech/blob/master/src/main/java/com/muxiao/bbs_daily.java#L200)
 
 | 九宫格验证码            | 点选验证码            |
 |-------------------|------------------|

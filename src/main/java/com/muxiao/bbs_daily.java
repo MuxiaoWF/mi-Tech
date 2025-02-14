@@ -194,6 +194,7 @@ public class bbs_daily {
         return "stoken=" + v2[0] + ";stuid=" + v2[2] + ";mid=" + v2[1];
     }
 
+    //如要更改，将最后一行return注释，前面几行取消注释
     protected static String[] getPassChallenge(Map<String, String> headers) {
      /*   String response = sendGetRequest("https://bbs-api.miyoushe.com/misc/api/createVerification?is_high=false", headers, null);
         JsonObject data = JsonParser.parseString(response).getAsJsonObject();

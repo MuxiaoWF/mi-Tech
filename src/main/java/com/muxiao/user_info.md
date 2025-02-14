@@ -7922,7 +7922,7 @@
     "retcode": 0,
     "message": "OK",
     "data": {
-      "uid": 632953370,
+      "uid": 6312341234370,
       "date": "2025-02-14",
       "month": 2,
       "month_hcoin": 6174,
@@ -7984,7 +7984,7 @@
       "month_end": "2025-02-01 00:00:00",
       "month": 1,
       "last_month": 12,
-      "uid": "632953370",
+      "uid": "631234123470",
       "month_level": 9,
       "count": "20"
     }
