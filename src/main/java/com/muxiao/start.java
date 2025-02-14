@@ -10,6 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicReference;
 
 import static com.muxiao.fixed.SALT_4X;
@@ -19,8 +20,15 @@ import static com.muxiao.tools.*;
 
 @SpringBootApplication
 public class start {
+    public static AtomicReference<String[]> passChallengeRef;
 
-    public static String[] start_service1(Map<String,String > headers) {
+    /**
+     * 启动服务 - 九宫格
+     *
+     * @param headers 使用遇到验证码当时使用的请求头
+     * @return 验证码的 challenge 和 validate
+     */
+    protected static String[] start_service1(Map<String, String> headers) {
         if (!started) {
             SpringApplication app = new SpringApplication(start.class);
             app.setLogStartupInfo(false);
@@ -47,7 +55,13 @@ public class start {
         GeetestController.statusNotifier.removeAllListeners();
         return passChallengeRef.get();
     }
-    public static AtomicReference<String[]> passChallengeRef;
+
+    /**
+     * 启动服务 - 点选
+     *
+     * @param headers 使用遇到验证码当时使用的请求头
+     * @return 验证码的 challenge 和 validate
+     */
     public static String[] start_service2(Map<String, String> headers) {
         if (!started) {
             SpringApplication app = new SpringApplication(start.class);
@@ -75,7 +89,17 @@ public class start {
         return passChallengeRef.get();
     }
 
-    public static String[] getPassChallenge1(Map<String,String> headers) {
+    /**
+     * 尝试停止服务
+     */
+    protected static void try_stop(){
+        if(started){
+            String local_url = "http://localhost:8080/shut-down-context";
+            CompletableFuture.runAsync(() -> sendPostRequest(local_url, new HashMap<>(), new HashMap<>()));
+        }
+    }
+
+    private static String[] getPassChallenge1(Map<String, String> headers) {
         String local_url = "http://localhost:8080/get-latest-validate";
         String responses = sendGetRequest(local_url, headers, new HashMap<>());
         JsonObject response = JsonParser.parseString(responses).getAsJsonObject();
@@ -96,7 +120,8 @@ public class start {
         }
         return null;
     }
-    public static String[] getPassChallenge2(Map<String,String> headers) {
+
+    private static String[] getPassChallenge2(Map<String, String> headers) {
         String local_url = "http://localhost:8080/get-latest-validate";
         String responses = sendGetRequest(local_url, headers, new HashMap<>());
         JsonObject response = JsonParser.parseString(responses).getAsJsonObject();
@@ -113,8 +138,8 @@ public class start {
             json.addProperty("geetest_challenge", challenge);
             json.addProperty("geetest_seccode", seccode);
             json.addProperty("geetest_validate", validate);
-            headers.put("DS",getDS2(json.toString(),SALT_4X,""));
-            String checkResponse = sendPostRequest("https://api-takumi-record.mihoyo.com/game_record/app/card/wapi/verifyVerification",headers, body);
+            headers.put("DS", getDS2(json.toString(), SALT_4X, ""));
+            String checkResponse = sendPostRequest("https://api-takumi-record.mihoyo.com/game_record/app/card/wapi/verifyVerification", headers, body);
             JsonObject check = JsonParser.parseString(checkResponse).getAsJsonObject();
             if (check.get("retcode").getAsInt() == 0 && check.getAsJsonObject("data").get("challenge").getAsString() != null) {
                 return new String[]{check.getAsJsonObject("data").get("challenge").getAsString(), validate};

@@ -8,6 +8,7 @@ import com.google.gson.*;
 
 import static com.muxiao.fixed.*;
 import static com.muxiao.get_stoken_qrcode.getDS2;
+import static com.muxiao.start.try_stop;
 import static com.muxiao.tools.sendGetRequest;
 import static com.muxiao.tools.sendPostRequest;
 
@@ -194,7 +195,7 @@ public class bbs_daily {
     }
 
     protected static String[] getPassChallenge(Map<String, String> headers) {
-     /*   String response = sendGetRequest("https://bbs-api.miyoushe.com/misc/api/createVerification?is_high=true", headers, null);
+     /*   String response = sendGetRequest("https://bbs-api.miyoushe.com/misc/api/createVerification?is_high=false", headers, null);
         JsonObject data = JsonParser.parseString(response).getAsJsonObject();
         if (data.get("retcode").getAsInt() != 0) {
             return null;
@@ -317,7 +318,7 @@ public class bbs_daily {
                 JsonObject data = JsonParser.parseString(response).getAsJsonObject();
                 if (data.get("retcode").getAsInt() == 1034) {
                     notifier.notifyListeners("社区签到触发验证码");
-                    notifier.notifyListeners("请打开网页：http://127.0.0.1:8080/verify-geetest.html 通过验证码");
+                    notifier.notifyListeners("请打开网页：http://127.0.0.1:8080/verify-geetest.html 通过验证码(如无法正常显示请刷新并检查网络链接)");
                     String[] temp = getPassChallenge(header);
                     if (temp != null) {
                         challenge = temp[0];
@@ -335,6 +336,7 @@ public class bbs_daily {
             }
             if (challenge != null) {
                 header.remove("x-rpc-challenge");
+                try_stop();
             }
         }
     }
@@ -378,6 +380,7 @@ public class bbs_daily {
                 notifier.notifyListeners("点赞：" + this.postsList.get(i).get(1) + " 成功");
                 if (challenge != null) {
                     challenge = null;
+                    try_stop();
                     header.remove("x-rpc-challenge");
                 }
                 wait1();
@@ -388,7 +391,7 @@ public class bbs_daily {
                 }
             } else if (data.get("retcode").getAsInt() == 1034) {
                 notifier.notifyListeners("点赞触发验证码");
-                notifier.notifyListeners("请打开网页：http://127.0.0.1:8080/verify-geetest.html 通过验证码");
+                notifier.notifyListeners("请打开网页：http://127.0.0.1:8080/verify-geetest.html 通过验证码(如无法正常显示请刷新并检查网络链接)");
                 String[] temp = getPassChallenge(header);
                 if (temp != null) {
                     challenge = temp[0];
@@ -743,7 +746,7 @@ public class bbs_daily {
                     continue;
                 }
                 if (data.get("retcode").getAsInt() == 0 && data.getAsJsonObject("data").get("success").getAsInt() != 0 && i < retries) {
-                    statusNotifier.notifyListeners("请打开网页：http://127.0.0.1:8080/verify-geetest.html 通过验证码");
+                    statusNotifier.notifyListeners("请打开网页：http://127.0.0.1:8080/verify-geetest.html 通过验证码(如无法正常显示请刷新并检查网络链接)");
                     String[] temp = bbs_daily.getPassChallenge(record_headers);
                     if (temp != null) {
                         String validate = temp[1];
@@ -760,6 +763,7 @@ public class bbs_daily {
                     break;
                 }
             }
+            try_stop();
             return response;
         }
 

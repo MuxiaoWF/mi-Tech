@@ -11,7 +11,9 @@ import java.util.regex.Pattern;
 
 import com.google.gson.JsonObject;
 
+import static com.muxiao.bbs_daily.getPassChallenge;
 import static com.muxiao.fixed.genshin_TCG_headers;
+import static com.muxiao.start.try_stop;
 import static com.muxiao.tools.sendGetRequest;
 import static com.muxiao.tools.sendPostRequest;
 
@@ -40,7 +42,7 @@ public class genshin_TCG {
      */
     public genshin_TCG(tools.StatusNotifier statusNotifier, Boolean checkInTask, Boolean weekTask) {
         this.statusNotifier = statusNotifier;
-        List<Map<String, String>> userListInfo = getHk4eToken(statusNotifier);
+        List<Map<String, String>> userListInfo = getHk4eToken(statusNotifier, false);
         for (Map<String, String> user : userListInfo) {
             this.userInfo = user;
             if (userInfo != null) {
@@ -91,8 +93,8 @@ public class genshin_TCG {
      *
      * @return 用户信息
      */
-    private List<Map<String, String>> getHk4eToken(tools.StatusNotifier statusNotifier) {
-        if (tools.files.read().get("e_hk4e_token") != null && tools.files.read().get(fixed.name_to_game_id("原神")+"_user") != null) {
+    private List<Map<String, String>> getHk4eToken(tools.StatusNotifier statusNotifier, boolean needUpdate) {
+        if (tools.files.read().get("e_hk4e_token") != null && tools.files.read().get(fixed.name_to_game_id("原神") + "_user") != null && !needUpdate) {
             String cookie = "account_id=" + tools.files.read().get("stuid") + ";cookie_token=" + tools.files.read().get("cookie_token");
             genshin_TCG_headers.put("Cookie", cookie + ";e_hk4e_token=" + tools.files.read().get("e_hk4e_token"));
             return tools.files.read(fixed.name_to_game_id("原神"));
@@ -156,9 +158,36 @@ public class genshin_TCG {
         try {
             String response = sendGetRequest("https://hk4e-api.mihoyo.com/event/geniusinvokationtcg/adventure_task_list", genshin_TCG_headers, params);
             JsonObject data = gson.fromJson(response, JsonObject.class);
-            if (data.get("retcode").getAsInt() != 0) {
+            if (data.get("retcode").getAsInt() == -100) {
+                statusNotifier.notifyListeners("e_hk4e_token失效，尝试刷新");
+                List<Map<String, String>> updatedUserInfo = getHk4eToken(statusNotifier, true);
+                if (!updatedUserInfo.isEmpty()) {
+                    for (Map<String, String> user : updatedUserInfo) {
+                        if (user.get("game_uid").equals(userInfo.get("game_uid")))
+                            this.userInfo = user;
+                    }
+                    this.params = Map.of(
+                            "badge_uid", userInfo.get("game_uid"),
+                            "badge_region", userInfo.get("region"),
+                            "game_biz", userInfo.get("game_biz"),
+                            "lang", "zh-cn"
+                    );
+                }
+                getTaskList();
+            } else if (data.get("retcode").getAsInt() == 1034) {
+                statusNotifier.notifyListeners("点赞触发验证码");
+                statusNotifier.notifyListeners("请打开网页：http://127.0.0.1:8080/verify-geetest.html 通过验证码(如无法正常显示请刷新并检查网络链接)");
+                String[] temp = getPassChallenge(genshin_TCG_headers);
+                if (temp != null) {
+                    String challenge = temp[0];
+                    genshin_TCG_headers.put("x-rpc-challenge", challenge);
+                }
+                getTaskList();
+            } else if (data.get("retcode").getAsInt() != 0) {
                 return;
             }
+            genshin_TCG_headers.remove("x-rpc-challenge");
+            try_stop();
             for (var task : data.getAsJsonObject("data").getAsJsonArray("active_tasks")) {
                 JsonObject taskObj = task.getAsJsonObject();
                 int taskId = taskObj.get("task_id").getAsInt();

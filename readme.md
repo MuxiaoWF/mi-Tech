@@ -1,22 +1,25 @@
-心血来潮写的<font size=0.5>绝对不是闲的</font>  
-由于鄙人为萌新（大学牲），仅仅了解Java不会springboot，springboot有bug的概率较高，见谅  
-~~写这个可能以后会写Android应用~~<font size=0.5>有空再说，忙死了(bushi)</font>  
+心血来潮写的<sub>绝对不是闲的</sub>   
+由于鄙人为萌新（大学牲），仅仅了解Java不会springboot，springboot有bug的概率较高<sub>（其他的有bug概率也挺高🙂）</sub>，见谅  
+~~写这个可能以后会写Android应用~~<sub>有空再说，忙死了(bushi) </sub>  
 鸣谢：[UIGF-org/mihoyo-api-collect 提供mihoyo的api参考](https://github.com/UIGF-org/mihoyo-api-collect)，[Womsxd/MihoyoBBSTools 绝大部分签到内容由python转写为Java](https://github.com/Womsxd/MihoyoBBSTools)，[luguoyixiazi/test_nine 提供自动过码相关内容](https://github.com/luguoyixiazi/test_nine)，[springboot关闭](https://blog.csdn.net/afreon/article/details/115805084)，
 [springboot 的使用由copilot帮忙写出](https://github.com/copilot) 还有感谢各位的支持
+
 ---
 
 ## 项目说明
 
-<font size=5>本项目仅供学习使用，仅供学习参考，请勿用于非法用途</font>  
+<h2>**本项目仅供学习使用，仅供学习参考，请勿用于非法用途**</h2>
 本项目包含获取stoken等参数，获取原神和绝区零（国服）的抽卡记录，获取米游社相关（游戏体力，每日任务（签到），获取文章等）  
-有关验证码自动过码请参考项目[luguoyixiazi/test_nine](https://github.com/luguoyixiazi/test_nine)，同时将[此处方法](com.muxiao.bbs_daily.getPassChallenge)
-的注释与实际执行的调换位置（注释改执行执行改注释），并且仅可过九宫格验证码，对于点选类型验证码仍需手动通过（因此默认为手动通过） 
+有关验证码自动过码请参考项目[luguoyixiazi/test_nine](https://github.com/luguoyixiazi/test_nine)
+，同时将[此处方法 getPassChallenge](src/main/java/com/muxiao/bbs_daily.java#L196)
 
 | 九宫格验证码            | 点选验证码            |
 |-------------------|------------------|
 | ![九宫格](pic/2.jpg) | ![点选](pic/1.jpg) |
 
 本项目验证码均可通过打开本地网址(http://127.0.0.1:8080/verify-geetest.html)通过后继续使用
+
+- [ ] 完成图片类型的输出
 
 ## 开始使用
 
@@ -206,6 +209,8 @@ public static void main(String[] args) {
     System.out.println(user_info.Genshin.day_analysed());
     System.out.println(user_info.Genshin.world_analysed());
     System.out.println(user_info.Genshin.TCG_analysed());
+    //...方法过多，可自行看方法注释和另一个文件
 }
 ```
 
+...方法过多不再写出，可自行看方法注释和[文件](src/main/java/com/muxiao/user_info.md)

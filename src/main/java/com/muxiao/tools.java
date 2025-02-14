@@ -23,7 +23,7 @@ public class tools {
     }
 
     protected static String[] get_gt_2(Map<String, String> header) {
-        String response = sendGetRequest("https://api-takumi-record.mihoyo.com/game_record/app/card/wapi/createVerification?is_high=true", header, null);
+        String response = sendGetRequest("https://api-takumi-record.mihoyo.com/game_record/app/card/wapi/createVerification?is_high=false", header, null);
         JsonObject data = JsonParser.parseString(response).getAsJsonObject();
         if (data.get("retcode").getAsInt() != 0) {
             throw new RuntimeException("获取验证码失败card/wapi/createVerification" + response);
@@ -195,6 +195,9 @@ public class tools {
         }
     }
 
+    /**
+     * 文件操作类
+     */
     public static class files {
         private static String user_name;
 
@@ -284,6 +287,11 @@ public class tools {
             write_global("device_name", data);
         }
 
+        /**
+         * 添加用户
+         *
+         * @param user_name 用户名
+         */
         public static void addUser(String user_name) {
             Map<String, String> map = read_global();
             if (map.containsKey("user")) {
@@ -298,6 +306,11 @@ public class tools {
             }
         }
 
+        /**
+         * 获取用户
+         *
+         * @return 用户数组
+         */
         public static String[] getUser() {
             Map<String, String> map = read_global();
             if (map.containsKey("user")) {
@@ -308,6 +321,11 @@ public class tools {
             }
         }
 
+        /**
+         * 设置当前用户
+         *
+         * @param user_name 用户名
+         */
         public static void setUser(String user_name) {
             files.user_name = user_name;
         }
