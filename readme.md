@@ -28,7 +28,7 @@
 
 #### 获取设备信息
 
-建议在项目第一次启动时调用一次，会自动保存设备信息，下次启动时直接读取
+建议在项目第一次启动时调用一次，会自动保存设备信息，下次启动时直接读取，后续可不再调用
 
 ```java
 import com.muxiao.tools;
@@ -47,6 +47,7 @@ import com.muxiao.tools;
 public static void main(String[] args) {
     tools.files.addUser("user_name");
     String[] userList = tools.files.getUser();
+    //后续必须写出使用的用户名
     tools.files.setUser("user_name");
 }
 ```
@@ -126,7 +127,7 @@ public static void main(String[] args) {
     //运行游戏签到任务，领取游戏的每日签到奖励。参数可填:崩坏2，崩坏3，未定事件簿，原神，星铁，绝区零
     b.gameTask(new String[]{"原神", "崩坏3", "绝区零", "星铁"});
     //原神七圣召唤赛事中心任务 参数：每日签到，每周对战奖励
-    new genshin_TCG(notifier, true, true);
+    //new genshin_TCG(notifier, true, true);不幸的是，似乎被砍掉了
     notifier.removeAllListeners();
 }
 ```

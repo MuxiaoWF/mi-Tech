@@ -273,9 +273,9 @@ class fixed {
      */
     private static String getDeviceId(String namespace, String name) {
         if (namespace == null)
-            namespace = "https://github.com/MuxiaoWF";
+            namespace = "https://github.com/MuxiaoWF/mi-Tech";
         if (name == null)
-            name = "muxiao";
+            name = "muxiaoOwO";
         // Convert namespace to UUID
         UUID namespaceUUID = UUID.nameUUIDFromBytes(namespace.getBytes());
         // Concatenate namespace and name

@@ -34,7 +34,7 @@ public class genshin_TCG {
     private Map<String, String> params;
 
     /**
-     * 构造函数，初始化任务列表
+     * 构造函数，初始化任务列表  --不幸的是，似乎牌币已经被取消了
      *
      * @param statusNotifier 状态通知器
      * @param checkInTask    是否执行每日签到任务

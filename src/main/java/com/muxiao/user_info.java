@@ -106,6 +106,7 @@ public class user_info {
                     put("nickname", jsonObject.get("nickname").getAsString());
                     put("level", jsonObject.get("level").getAsString());
                     put("game_uid", jsonObject.get("game_uid").getAsString());
+                    put("region", jsonObject.get("region").getAsString());
                 }};
                 users.add(temp);
             }
@@ -799,6 +800,58 @@ public class user_info {
             }
             return sb.toString();
         }
+
+        /**
+         * 返回角色账号下所有角色的信息（json源文件，微调）
+         *
+         * @return String的List - 防止多用户
+         */
+        public static List<String> character_list() {
+            List<Map<String, String>> users = get_user_game_role(fixed.name_to_game_id("原神"));
+            if (no_has_role("原神"))
+                return List.of("当前账号无角色");
+            List<String> responses = new ArrayList<>();
+            for (Map<String, String> user : users) {
+                Map<String, Object> body = new HashMap<>() {{
+                    put("server", user.get("region"));
+                    put("sort_type", 1);
+                    put("role_id", user.get("game_uid"));
+                }};
+                String response = sendPostRequest("https://api-takumi-record.mihoyo.com/game_record/app/genshin/api/character/list", record_headers, body);
+                JsonObject jsonObject = JsonParser.parseString(response).getAsJsonObject();
+                jsonObject = captcha(jsonObject, "https://api-takumi-record.mihoyo.com/game_record/app/genshin/api/character/list", "原神");
+                jsonObject.getAsJsonObject("data").addProperty("uid", user.get("game_uid"));
+                jsonObject.getAsJsonObject("data").addProperty("nickname", user.get("nickname"));
+                jsonObject.getAsJsonObject("data").addProperty("region", user.get("region"));
+                if (jsonObject.get("message").getAsString().equals("OK")) {
+                    responses.add(jsonObject.toString());
+                }
+            }
+            return responses;
+        }
+
+        /**
+         * 返回角色账号下指定角色（可多个）的详细信息（json源文件）
+         *
+         * @param uid           用户uid，参数均建议从character_list获取
+         * @param server        服务器(region)
+         * @param character_ids 角色id
+         * @return String
+         */
+        public static String character_info(String uid, String server, int[] character_ids) {
+            Map<String, Object> body = new HashMap<>() {{
+                put("server", server);
+                put("character_ids", character_ids);
+                put("role_id", uid);
+            }};
+            String response = sendPostRequest("https://api-takumi-record.mihoyo.com/game_record/app/genshin/api/character/detail", record_headers, body);
+            JsonObject jsonObject = JsonParser.parseString(response).getAsJsonObject();
+            jsonObject = captcha(jsonObject, "https://api-takumi-record.mihoyo.com/game_record/app/genshin/api/character/detail", "原神");
+            if (jsonObject.get("message").getAsString().equals("OK")) {
+                return response;
+            }
+            throw new RuntimeException("character_detail获取失败" + response);
+        }
     }
 
     public static class Hkrpg {
@@ -1339,6 +1392,59 @@ public class user_info {
             }
             return sb.toString();
         }
+
+        /**
+         * 返回角色账号下所有角色的信息（json源文件，微调）
+         *
+         * @return String的List - 防止多用户
+         */
+        public static List<String> character_list() {
+            List<Map<String, String>> users = get_user_game_role(fixed.name_to_game_id("星铁"));
+            if (no_has_role("崩坏：星穹铁道"))
+                return List.of("当前账号无角色");
+            List<String> responses = new ArrayList<>();
+            for (Map<String, String> user : users) {
+                Map<String, String> body = new HashMap<>() {{
+                    put("rolePageAccessNotAllowed", "");
+                    put("server", user.get("region"));
+                    put("role_id", user.get("game_uid"));
+                }};
+                record_headers.put("DS", getDS2("", SALT_4X, "rolePageAccessNotAllowed=" + "&role_id=" + user.get("game_uid") + "&server=" + user.get("region")));
+                String response = sendGetRequest("https://api-takumi-record.mihoyo.com/game_record/app/hkrpg/api/avatar/basic", record_headers, body);
+                JsonObject jsonObject = JsonParser.parseString(response).getAsJsonObject();
+                jsonObject = captcha(jsonObject, "https://api-takumi-record.mihoyo.com/game_record/app/hkrpg/api/avatar/basic", "星铁");
+                jsonObject.getAsJsonObject("data").addProperty("uid", user.get("game_uid"));
+                jsonObject.getAsJsonObject("data").addProperty("nickname", user.get("nickname"));
+                jsonObject.getAsJsonObject("data").addProperty("region", user.get("region"));
+                if (jsonObject.get("message").getAsString().equals("OK")) {
+                    responses.add(jsonObject.toString());
+                }
+            }
+            return responses;
+        }
+
+        /**
+         * 返回角色账号下指定角色（可多个）的详细信息（json源文件） 由于无论id都是返回全部角色+加id参数DS算法结果错误，取消character_id的param
+         *
+         * @param uid    用户uid，参数均建议从character_list获取
+         * @param server 服务器(region)
+         * @return String
+         */
+        public static String character_info(String uid, String server) {
+            Map<String, String> body = new HashMap<>() {{
+                put("need_wiki", "false");
+                put("role_id", uid);
+                put("server", server);
+            }};
+            record_headers.put("DS", getDS2("", SALT_4X, "need_wiki=false&role_id=" + uid + "&server=" + server));
+            String response = sendGetRequest("https://api-takumi-record.mihoyo.com/game_record/app/hkrpg/api/avatar/info", record_headers, body);
+            JsonObject jsonObject = JsonParser.parseString(response).getAsJsonObject();
+            jsonObject = captcha(jsonObject, "https://api-takumi-record.mihoyo.com/game_record/app/hkrpg/api/avatar/info", "星铁");
+            if (jsonObject.get("message").getAsString().equals("OK")) {
+                return response;
+            }
+            throw new RuntimeException("character_detail获取失败" + response);
+        }
     }
 
     public static class ZZZ {
@@ -1683,6 +1789,58 @@ public class user_info {
                 sb.append(note_object.get("name").getAsString()).append(": ").append(note_object.get("value").getAsString()).append("\n");
             }
             return sb.toString();
+        }
+
+        /**
+         * 返回角色账号下所有角色的信息（json源文件，微调）
+         *
+         * @return String的List - 防止多用户
+         */
+        public static List<String> character_list() {
+            List<Map<String, String>> users = get_user_game_role(fixed.name_to_game_id("绝区零"));
+            if (no_has_role("绝区零"))
+                return List.of("当前账号无角色");
+            List<String> responses = new ArrayList<>();
+            for (Map<String, String> user : users) {
+                Map<String, String> body = new HashMap<>() {{
+                    put("server", user.get("region"));
+                    put("role_id", user.get("game_uid"));
+                }};
+                String response = sendGetRequest("https://api-takumi-record.mihoyo.com/event/game_record_zzz/api/zzz/avatar/basic", record_headers, body);
+                JsonObject jsonObject = JsonParser.parseString(response).getAsJsonObject();
+                jsonObject = captcha(jsonObject, "https://api-takumi-record.mihoyo.com/event/game_record_zzz/api/zzz/avatar/basic", "绝区零");
+                jsonObject.getAsJsonObject("data").addProperty("uid", user.get("game_uid"));
+                jsonObject.getAsJsonObject("data").addProperty("nickname", user.get("nickname"));
+                jsonObject.getAsJsonObject("data").addProperty("region", user.get("region"));
+                if (jsonObject.get("message").getAsString().equals("OK")) {
+                    responses.add(jsonObject.toString());
+                }
+            }
+            return responses;
+        }
+
+        /**
+         * 返回角色账号下指定角色的详细信息（json源文件）
+         *
+         * @param uid          用户uid，参数均建议从character_list获取
+         * @param server       服务器(region)
+         * @param character_id 角色id
+         * @return String
+         */
+        public static String character_info(String uid, String server, int character_id) {
+            Map<String, String> body = new HashMap<>() {{
+                put("server", server);
+                put("need_wiki", "false");
+                put("id_list[]", String.valueOf(character_id));
+                put("role_id", uid);
+            }};
+            String response = sendGetRequest("https://api-takumi-record.mihoyo.com/event/game_record_zzz/api/zzz/avatar/info", record_headers, body);
+            JsonObject jsonObject = JsonParser.parseString(response).getAsJsonObject();
+            jsonObject = captcha(jsonObject, "https://api-takumi-record.mihoyo.com/game_record/app/genshin/api/character/info", "绝区零");
+            if (jsonObject.get("message").getAsString().equals("OK")) {
+                return response;
+            }
+            throw new RuntimeException("character_detail获取失败" + response);
         }
     }
 

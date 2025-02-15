@@ -2393,8 +2393,1128 @@
 ```
 
 </details>
+<details>
+<summary>character_list方法返回（微调添加uid，nickname，region）</summary>
+
+```json
+[
+  {
+    "retcode": 0,
+    "message": "OK",
+    "data": {
+      "list": [
+        {
+          "id": 10000052,
+          "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_ud6bmh/f22041dd728670a2f1dba4784495f7db.png",
+          "name": "雷电将军",
+          "element": "Electro",
+          "fetter": 10,
+          "level": 90,
+          "rarity": 5,
+          "actived_constellation_num": 1,
+          "image": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/image_7/c3b756f915148bf843c835251fdf8175.png",
+          "is_chosen": false,
+          "side_icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_avatar_side_icon_ud6bmh/5ad6fec28fa20f6cc548fc0077f485d0.png",
+          "weapon_type": 13,
+          "weapon": {
+            "id": 13407,
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_ud6bmh/de66a3122cde1b5b07c40f06cc3fb4a4.png",
+            "type": 13,
+            "rarity": 4,
+            "level": 90,
+            "affix_level": 5,
+            "name": "西风长枪"
+          }
+        },
+        {
+          "id": 10000047,
+          "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_ud6bmh/d82349d58ca86f734ae256b3f3336e07.png",
+          "name": "枫原万叶",
+          "element": "Anemo",
+          "fetter": 10,
+          "level": 90,
+          "rarity": 5,
+          "actived_constellation_num": 0,
+          "image": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/image_7/26ea3d4cecb403fc5368b9a24dc03ecd.png",
+          "is_chosen": false,
+          "side_icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_avatar_side_icon_ud6bmh/2ad03c81919967119acda6739ace46e1.png",
+          "weapon_type": 1,
+          "weapon": {
+            "id": 11418,
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_ud6bmh/4ac1bd7195438ed1da98a7c271e262fe.png",
+            "type": 1,
+            "rarity": 4,
+            "level": 90,
+            "affix_level": 1,
+            "name": "西福斯的月光"
+          }
+        }
+      ],
+      "uid": "21******9",
+      "nickname": "暮晓",
+      "region": "cn_gf01"
+    }
+  }
+]
+
+```
+
+</details>
+<details>
+<summary>character_info方法返回</summary>
+
+```json
+{
+  "retcode": 0,
+  "message": "OK",
+  "data": {
+    "list": [
+      {
+        "base": {
+          "id": 10000047,
+          "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_ud6bmh/d82349d58ca86f734ae256b3f3336e07.png",
+          "name": "枫原万叶",
+          "element": "Anemo",
+          "fetter": 10,
+          "level": 90,
+          "rarity": 5,
+          "actived_constellation_num": 0,
+          "image": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/image_7/26ea3d4cecb403fc5368b9a24dc03ecd.png",
+          "is_chosen": false,
+          "side_icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_avatar_side_icon_ud6bmh/2ad03c81919967119acda6739ace46e1.png",
+          "weapon_type": 1,
+          "weapon": {
+            "id": 11418,
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_ud6bmh/4ac1bd7195438ed1da98a7c271e262fe.png",
+            "type": 1,
+            "rarity": 4,
+            "level": 90,
+            "affix_level": 1,
+            "name": "西福斯的月光"
+          }
+        },
+        "weapon": {
+          "id": 11418,
+          "name": "西福斯的月光",
+          "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_ud6bmh/4ac1bd7195438ed1da98a7c271e262fe.png",
+          "type": 1,
+          "rarity": 4,
+          "level": 90,
+          "promote_level": 6,
+          "type_name": "单手剑",
+          "desc": "闪着月色光彩的古老双刃剑。据说其中寄寓着如今已经沉默的镇灵。",
+          "affix_level": 1,
+          "main_property": {
+            "property_type": 4,
+            "base": "",
+            "add": "",
+            "final": "510"
+          },
+          "sub_property": {
+            "property_type": 28,
+            "base": "",
+            "add": "",
+            "final": "165"
+          }
+        },
+        "relics": [
+          {
+            "id": 76543,
+            "name": "野花记忆的绿野",
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_ud6bmh/a1d8550f15176e665cd3d299cd0c2184.png",
+            "pos": 1,
+            "rarity": 5,
+            "level": 20,
+            "set": {
+              "id": 2150021,
+              "name": "翠绿之影",
+              "affixes": [
+                {
+                  "activation_number": 2,
+                  "effect": "获得15%风元素伤害加成。"
+                },
+                {
+                  "activation_number": 4,
+                  "effect": "扩散反应造成的伤害提升60%。根据扩散的元素类型，降低受到影响的敌人40%的对应元素抗性，持续10秒。"
+                }
+              ]
+            },
+            "pos_name": "生之花",
+            "main_property": {
+              "property_type": 2,
+              "value": "4780",
+              "times": 0
+            },
+            "sub_property_list": [
+              {
+                "property_type": 20,
+                "value": "8.9%",
+                "times": 2
+              },
+              {
+                "property_type": 28,
+                "value": "21",
+                "times": 0
+              },
+              {
+                "property_type": 23,
+                "value": "4.5%",
+                "times": 0
+              },
+              {
+                "property_type": 3,
+                "value": "15.7%",
+                "times": 2
+              }
+            ]
+          },
+          {
+            "id": 76524,
+            "name": "猎人青翠的箭羽",
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_ud6bmh/912d390570dbf5e04fd669c9582658f1.png",
+            "pos": 2,
+            "rarity": 5,
+            "level": 20,
+            "set": {
+              "id": 2150021,
+              "name": "翠绿之影",
+              "affixes": [
+                {
+                  "activation_number": 2,
+                  "effect": "获得15%风元素伤害加成。"
+                },
+                {
+                  "activation_number": 4,
+                  "effect": "扩散反应造成的伤害提升60%。根据扩散的元素类型，降低受到影响的敌人40%的对应元素抗性，持续10秒。"
+                }
+              ]
+            },
+            "pos_name": "死之羽",
+            "main_property": {
+              "property_type": 5,
+              "value": "311",
+              "times": 0
+            },
+            "sub_property_list": [
+              {
+                "property_type": 23,
+                "value": "5.2%",
+                "times": 0
+              },
+              {
+                "property_type": 20,
+                "value": "3.1%",
+                "times": 0
+              },
+              {
+                "property_type": 2,
+                "value": "956",
+                "times": 3
+              },
+              {
+                "property_type": 22,
+                "value": "20.2%",
+                "times": 2
+              }
+            ]
+          },
+          {
+            "id": 76553,
+            "name": "翠绿猎人的笃定",
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_ud6bmh/3d579fbc74effe4de1e37ac10e899a72.png",
+            "pos": 3,
+            "rarity": 5,
+            "level": 20,
+            "set": {
+              "id": 2150021,
+              "name": "翠绿之影",
+              "affixes": [
+                {
+                  "activation_number": 2,
+                  "effect": "获得15%风元素伤害加成。"
+                },
+                {
+                  "activation_number": 4,
+                  "effect": "扩散反应造成的伤害提升60%。根据扩散的元素类型，降低受到影响的敌人40%的对应元素抗性，持续10秒。"
+                }
+              ]
+            },
+            "pos_name": "时之沙",
+            "main_property": {
+              "property_type": 28,
+              "value": "187",
+              "times": 0
+            },
+            "sub_property_list": [
+              {
+                "property_type": 5,
+                "value": "35",
+                "times": 1
+              },
+              {
+                "property_type": 6,
+                "value": "4.1%",
+                "times": 0
+              },
+              {
+                "property_type": 23,
+                "value": "22.0%",
+                "times": 3
+              },
+              {
+                "property_type": 9,
+                "value": "6.6%",
+                "times": 0
+              }
+            ]
+          },
+          {
+            "id": 76513,
+            "name": "翠绿猎人的容器",
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_ud6bmh/9b02ab3532859e071b6a0e3811cf65b9.png",
+            "pos": 4,
+            "rarity": 5,
+            "level": 20,
+            "set": {
+              "id": 2150021,
+              "name": "翠绿之影",
+              "affixes": [
+                {
+                  "activation_number": 2,
+                  "effect": "获得15%风元素伤害加成。"
+                },
+                {
+                  "activation_number": 4,
+                  "effect": "扩散反应造成的伤害提升60%。根据扩散的元素类型，降低受到影响的敌人40%的对应元素抗性，持续10秒。"
+                }
+              ]
+            },
+            "pos_name": "空之杯",
+            "main_property": {
+              "property_type": 6,
+              "value": "46.6%",
+              "times": 0
+            },
+            "sub_property_list": [
+              {
+                "property_type": 2,
+                "value": "807",
+                "times": 2
+              },
+              {
+                "property_type": 22,
+                "value": "6.2%",
+                "times": 0
+              },
+              {
+                "property_type": 23,
+                "value": "11.0%",
+                "times": 1
+              },
+              {
+                "property_type": 20,
+                "value": "7.8%",
+                "times": 1
+              }
+            ]
+          },
+          {
+            "id": 80534,
+            "name": "焦灼的魔女帽",
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_icon_ud6bmh/11a2980a75915598080a7e804fca0eeb.png",
+            "pos": 5,
+            "rarity": 5,
+            "level": 20,
+            "set": {
+              "id": 2150061,
+              "name": "炽烈的炎之魔女",
+              "affixes": [
+                {
+                  "activation_number": 2,
+                  "effect": "获得15%火元素伤害加成。"
+                },
+                {
+                  "activation_number": 4,
+                  "effect": "超载、燃烧、烈绽放反应造成的伤害提升40%，蒸发、融化反应的加成系数提高15%。施放元素战技后的10秒内，2件套的效果提高50%，该效果最多叠加3次。"
+                }
+              ]
+            },
+            "pos_name": "理之冠",
+            "main_property": {
+              "property_type": 28,
+              "value": "187",
+              "times": 0
+            },
+            "sub_property_list": [
+              {
+                "property_type": 22,
+                "value": "14.0%",
+                "times": 1
+              },
+              {
+                "property_type": 6,
+                "value": "5.8%",
+                "times": 0
+              },
+              {
+                "property_type": 23,
+                "value": "21.4%",
+                "times": 3
+              },
+              {
+                "property_type": 20,
+                "value": "6.2%",
+                "times": 1
+              }
+            ]
+          }
+        ],
+        "constellations": [
+          {
+            "id": 471,
+            "name": "千山红遍",
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_talent_icon_ud6bmh/d28953b27472384a0d64de21cdd7f19a.png",
+            "effect": "\u003ccolor=#FFD780FF\u003e千早振\u003c/color\u003e的冷却时间减少10%。\\n施放\u003ccolor=#FFD780FF\u003e万叶之一刀\u003c/color\u003e时，重置\u003ccolor=#FFD780FF\u003e千早振\u003c/color\u003e的冷却时间。",
+            "is_actived": false,
+            "pos": 1
+          },
+          {
+            "id": 472,
+            "name": "山岚残芯",
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_talent_icon_ud6bmh/de7b68b8315c602188ecf1d23cdf11dd.png",
+            "effect": "\u003ccolor=#FFD780FF\u003e万叶之一刀\u003c/color\u003e的流风秋野具有以下效果：\\n·持续期间内，枫原万叶自己的元素精通提升200点；\\n·其中的场上角色的元素精通提升200点。\\n\\n该命之座提供的元素精通提升效果无法叠加。",
+            "is_actived": false,
+            "pos": 2
+          },
+          {
+            "id": 473,
+            "name": "枫袖奇谭",
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_talent_icon_ud6bmh/e639db303accf13b73c4035d8916b74e.png",
+            "effect": "\u003ccolor=#FFD780FF\u003e千早振\u003c/color\u003e的技能等级提高3级。\\n至多提升至15级。",
+            "is_actived": false,
+            "pos": 3
+          },
+          {
+            "id": 474,
+            "name": "大空幻法",
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_talent_icon_ud6bmh/747d81df2a5dac86ed43009dffe37dda.png",
+            "effect": "当枫原万叶的元素能量低于45点时，具有如下效果：\\n·点按、长按施放\u003ccolor=#FFD780FF\u003e千早振\u003c/color\u003e时，将分别为枫原万叶恢复3、4点元素能量；\\n·处于滑翔状态下时，每秒为枫原万叶恢复2点元素能量。",
+            "is_actived": false,
+            "pos": 4
+          },
+          {
+            "id": 475,
+            "name": "万世之集",
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_talent_icon_ud6bmh/40bd8fb96dfbd00812e98aa298aed465.png",
+            "effect": "\u003ccolor=#FFD780FF\u003e万叶之一刀\u003c/color\u003e的技能等级提高3级。\\n至多提升至15级。",
+            "is_actived": false,
+            "pos": 5
+          },
+          {
+            "id": 476,
+            "name": "血赤叶红",
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_talent_icon_ud6bmh/86516b0f53efa9349a54f12b8c26ad47.png",
+            "effect": "枫原万叶施放\u003ccolor=#FFD780FF\u003e千早振\u003c/color\u003e或\u003ccolor=#FFD780FF\u003e万叶之一刀\u003c/color\u003e后的5秒内，获得\u003ccolor=#80FFD7FF\u003e风元素附魔\u003c/color\u003e，并且枫原万叶的每点元素精通，都会使他的普通攻击、重击、下落攻击造成的伤害提高0.2%。",
+            "is_actived": false,
+            "pos": 6
+          }
+        ],
+        "costumes": [],
+        "selected_properties": [
+          {
+            "property_type": 2000,
+            "base": "13348",
+            "add": "8644",
+            "final": "21992"
+          },
+          {
+            "property_type": 20,
+            "base": "31.1%",
+            "add": "",
+            "final": "31.1%"
+          },
+          {
+            "property_type": 2001,
+            "base": "806",
+            "add": "802",
+            "final": "1608"
+          },
+          {
+            "property_type": 22,
+            "base": "90.4%",
+            "add": "",
+            "final": "90.4%"
+          },
+          {
+            "property_type": 2002,
+            "base": "807",
+            "add": "53",
+            "final": "860"
+          },
+          {
+            "property_type": 26,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 28,
+            "base": "675",
+            "add": "",
+            "final": "675"
+          },
+          {
+            "property_type": 27,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 44,
+            "base": "15.0%",
+            "add": "",
+            "final": "15.0%"
+          },
+          {
+            "property_type": 23,
+            "base": "164.1%",
+            "add": "",
+            "final": "164.1%"
+          }
+        ],
+        "base_properties": [
+          {
+            "property_type": 2000,
+            "base": "13348",
+            "add": "8644",
+            "final": "21992"
+          },
+          {
+            "property_type": 2001,
+            "base": "806",
+            "add": "802",
+            "final": "1608"
+          },
+          {
+            "property_type": 2002,
+            "base": "807",
+            "add": "53",
+            "final": "860"
+          },
+          {
+            "property_type": 28,
+            "base": "675",
+            "add": "",
+            "final": "675"
+          },
+          {
+            "property_type": 999999,
+            "base": "240",
+            "add": "",
+            "final": "240"
+          }
+        ],
+        "extra_properties": [
+          {
+            "property_type": 20,
+            "base": "31.1%",
+            "add": "",
+            "final": "31.1%"
+          },
+          {
+            "property_type": 22,
+            "base": "90.4%",
+            "add": "",
+            "final": "90.4%"
+          },
+          {
+            "property_type": 26,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 27,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 23,
+            "base": "164.1%",
+            "add": "",
+            "final": "164.1%"
+          },
+          {
+            "property_type": 80,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 81,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          }
+        ],
+        "element_properties": [
+          {
+            "property_type": 40,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 50,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 42,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 52,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 43,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 53,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 41,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 51,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 44,
+            "base": "15.0%",
+            "add": "",
+            "final": "15.0%"
+          },
+          {
+            "property_type": 54,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 46,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 56,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 45,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 55,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 30,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 29,
+            "base": "0.0%",
+            "add": "",
+            "final": "0.0%"
+          }
+        ],
+        "skills": [
+          {
+            "skill_id": 10471,
+            "skill_type": 1,
+            "level": 6,
+            "desc": "\u003ccolor=#FFD780FF\u003e普通攻击\u003c/color\u003e\\n进行至多五段的连续剑击。\\n\\n\u003ccolor=#FFD780FF\u003e重击\u003c/color\u003e\\n消耗一定体力，瞬间向前方挥出两剑。\\n\\n\u003ccolor=#FFD780FF\u003e下落攻击\u003c/color\u003e\\n从空中下坠冲击地面，攻击下落路径上的敌人，并在落地时造成范围伤害。若这次下落攻击经由千早振施放，则会转为施放下落攻击·乱岚拨止。\\n\\n\u003ccolor=#FFD780FF\u003e下落攻击·乱岚拨止\u003c/color\u003e\\n通过元素战技·千早振施放的下落攻击，造成的伤害将转化为\u003ccolor=#80FFD7FF\u003e风元素伤害\u003c/color\u003e，并在落地时施展秘剑产生小型的风穴，牵引附近的物体与敌人。",
+            "skill_affix_list": [
+              {
+                "name": "一段伤害",
+                "value": "65.4%"
+              },
+              {
+                "name": "二段伤害",
+                "value": "65.8%"
+              },
+              {
+                "name": "三段伤害",
+                "value": "37.5%+45.0%"
+              },
+              {
+                "name": "四段伤害",
+                "value": "88.3%"
+              },
+              {
+                "name": "五段伤害",
+                "value": "36.9%*3"
+              },
+              {
+                "name": "重击伤害",
+                "value": "62.5%+108.5%"
+              },
+              {
+                "name": "重击体力消耗",
+                "value": "20.0点"
+              },
+              {
+                "name": "下坠期间伤害",
+                "value": "118.9%"
+              },
+              {
+                "name": "低空/高空坠地冲击伤害",
+                "value": "238%/297%"
+              }
+            ],
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_skill_icon_ud6bmh/786ea65668c379b32763a6c759bb689b.png",
+            "is_unlock": true,
+            "name": "普通攻击·我流剑术"
+          },
+          {
+            "skill_id": 10472,
+            "skill_type": 1,
+            "level": 9,
+            "desc": "施展如同冲风般激昂的秘剑，将敌人与物体牵引至所在位置，击飞范围内的敌人，造成\u003ccolor=#80FFD7FF\u003e风元素伤害\u003c/color\u003e，并借由喷薄的气流如登泷般腾空而起。\\n枫原万叶因元素战技·千早振而升空后的10秒内并持续处于空中时，若进行下落攻击，则会施展格外强劲的下落攻击·乱岚拨止。\\n\\n\u003ccolor=#FFD780FF\u003e点按\u003c/color\u003e\\n可以在空中施放。\\n\\n\u003ccolor=#FFD780FF\u003e长按\u003c/color\u003e\\n积蓄力量后施展，相对于点按，在更大的范围内造成更高的\u003ccolor=#80FFD7FF\u003e风元素伤害\u003c/color\u003e。\\n\\n\u003ccolor=#FFD780FF\u003e下落攻击·乱岚拨止\u003c/color\u003e\\n通过元素战技·千早振施放的下落攻击，造成的伤害将转化为\u003ccolor=#80FFD7FF\u003e风元素伤害\u003c/color\u003e，并在落地时施展秘剑产生小型的风穴，牵引附近的物体与敌人。\\n乱岚拨止造成的伤害视为下落攻击伤害。\\n\\n\u003ci\u003e「枫袖起悲风，神代万世人百年，秋山落唐红。」\u003c/i\u003e",
+            "skill_affix_list": [
+              {
+                "name": "点按技能伤害",
+                "value": "326%"
+              },
+              {
+                "name": "点按冷却时间",
+                "value": "6.0秒"
+              },
+              {
+                "name": "长按技能伤害",
+                "value": "443%"
+              },
+              {
+                "name": "长按冷却时间",
+                "value": "9.0秒"
+              }
+            ],
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_skill_icon_ud6bmh/e607c053c4bff356cc7960b8e93320d0.png",
+            "is_unlock": true,
+            "name": "千早振"
+          },
+          {
+            "skill_id": 10475,
+            "skill_type": 1,
+            "level": 9,
+            "desc": "施展我流的奥义，斩出初岚般的一刀，造成\u003ccolor=#80FFD7FF\u003e风元素范围伤害\u003c/color\u003e。\\n刀风会留下名为「流风秋野」的领域，对其中的敌人造成间歇的\u003ccolor=#80FFD7FF\u003e风元素伤害\u003c/color\u003e。\\n\\n\u003ccolor=#FFD780FF\u003e元素转化\u003c/color\u003e\\n若流风秋野在持续期间接触了\u003ccolor=#80C0FFFF\u003e水元素\u003c/color\u003e/\u003ccolor=#FF9999FF\u003e火元素\u003c/color\u003e/\u003ccolor=#99FFFFFF\u003e冰元素\u003c/color\u003e/\u003ccolor=#FFACFFFF\u003e雷元素\u003c/color\u003e，则会获得对应元素属性，额外造成该元素附加伤害。\\n这种转化在技能持续期间仅会发生一次。\\n\\n\u003ci\u003e「须臾照见万世长，一叶便知天下秋。我欲凭切枫一闪，做万世之问叩——」\u003c/i\u003e",
+            "skill_affix_list": [
+              {
+                "name": "斩击伤害",
+                "value": "446%"
+              },
+              {
+                "name": "持续伤害",
+                "value": "204%"
+              },
+              {
+                "name": "附加元素伤害",
+                "value": "61%"
+              },
+              {
+                "name": "持续时间",
+                "value": "8.0秒"
+              },
+              {
+                "name": "冷却时间",
+                "value": "15.0秒"
+              },
+              {
+                "name": "元素能量",
+                "value": "60"
+              }
+            ],
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_skill_icon_ud6bmh/2054bc9df2a846114cf9ecef6251ce77.png",
+            "is_unlock": true,
+            "name": "万叶之一刀"
+          },
+          {
+            "skill_id": 4721,
+            "skill_type": 2,
+            "level": 1,
+            "desc": "\u003ccolor=#FFD780FF\u003e千早振\u003c/color\u003e在施放时，如果接触了\u003ccolor=#80C0FFFF\u003e水元素\u003c/color\u003e/\u003ccolor=#FF9999FF\u003e火元素\u003c/color\u003e/\u003ccolor=#99FFFFFF\u003e冰元素\u003c/color\u003e/\u003ccolor=#FFACFFFF\u003e雷元素\u003c/color\u003e，则会使这次\u003ccolor=#FFD780FF\u003e千早振\u003c/color\u003e的下落攻击·乱岚拨止，发生元素转化，将附加200%攻击力的对应元素伤害，该伤害视为下落攻击伤害。每次\u003ccolor=#FFD780FF\u003e千早振\u003c/color\u003e的技能效果中，元素转化仅会发生一次。",
+            "skill_affix_list": [],
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_talent_icon_ud6bmh/86850c4db255663ccfb36d505c180fcc.png",
+            "is_unlock": true,
+            "name": "相闻之剑法"
+          },
+          {
+            "skill_id": 4722,
+            "skill_type": 2,
+            "level": 1,
+            "desc": "枫原万叶触发扩散反应后，枫原万叶的每点元素精通，会为队伍中所有角色提供0.04%对应元素伤害加成，持续8秒。通过这种方式获得的不同元素伤害加成可以共存。",
+            "skill_affix_list": [],
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_talent_icon_ud6bmh/7ac9f5ed3e13f422fa188624ef5cdebd.png",
+            "is_unlock": true,
+            "name": "风物之诗咏"
+          },
+          {
+            "skill_id": 4723,
+            "skill_type": 2,
+            "level": 1,
+            "desc": "队伍中自己的角色冲刺消耗的体力降低20%。\\n无法与效果完全相同的固有天赋叠加。",
+            "skill_affix_list": [],
+            "icon": "https://act-webstatic.mihoyo.com/hk4e/e20200928calculate/item_talent_icon_ud6bmh/d07a549f73cb76b43bc29b18b86816d4.png",
+            "is_unlock": true,
+            "name": "松风霞立"
+          }
+        ],
+        "recommend_relic_property": {
+          "recommend_properties": {
+            "sand_main_property_list": [
+              28
+            ],
+            "goblet_main_property_list": [
+              28
+            ],
+            "circlet_main_property_list": [
+              28
+            ],
+            "sub_property_list": [
+              28
+            ]
+          },
+          "custom_properties": null,
+          "has_set_recommend_prop": false
+        }
+      }
+    ],
+    "property_map": {
+      "46": {
+        "property_type": 46,
+        "name": "冰元素伤害加成",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_46.png",
+        "filter_name": "冰元素伤害加成"
+      },
+      "2001": {
+        "property_type": 2001,
+        "name": "攻击力",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_2001.png",
+        "filter_name": "攻击力"
+      },
+      "2002": {
+        "property_type": 2002,
+        "name": "防御力",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_2002.png",
+        "filter_name": "防御力"
+      },
+      "4": {
+        "property_type": 4,
+        "name": "基础攻击力",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_2001.png",
+        "filter_name": "基础攻击力"
+      },
+      "999999": {
+        "property_type": 999999,
+        "name": "体力上限",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_99999.png",
+        "filter_name": "体力上限"
+      },
+      "29": {
+        "property_type": 29,
+        "name": "物理抗性",
+        "icon": "",
+        "filter_name": "物理抗性"
+      },
+      "56": {
+        "property_type": 56,
+        "name": "冰元素抗性",
+        "icon": "",
+        "filter_name": "冰元素抗性"
+      },
+      "20": {
+        "property_type": 20,
+        "name": "暴击率",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_20.png",
+        "filter_name": "暴击率"
+      },
+      "42": {
+        "property_type": 42,
+        "name": "水元素伤害加成",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_42.png",
+        "filter_name": "水元素伤害加成"
+      },
+      "2000": {
+        "property_type": 2000,
+        "name": "生命值上限",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_2000.png",
+        "filter_name": "生命值上限"
+      },
+      "30": {
+        "property_type": 30,
+        "name": "物理伤害加成",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_30.png",
+        "filter_name": "物理伤害加成"
+      },
+      "51": {
+        "property_type": 51,
+        "name": "雷元素抗性",
+        "icon": "",
+        "filter_name": "雷元素抗性"
+      },
+      "50": {
+        "property_type": 50,
+        "name": "火元素抗性",
+        "icon": "",
+        "filter_name": "火元素抗性"
+      },
+      "54": {
+        "property_type": 54,
+        "name": "风元素抗性",
+        "icon": "",
+        "filter_name": "风元素抗性"
+      },
+      "2": {
+        "property_type": 2,
+        "name": "生命值",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_2000.png",
+        "filter_name": "生命值"
+      },
+      "52": {
+        "property_type": 52,
+        "name": "水元素抗性",
+        "icon": "",
+        "filter_name": "水元素抗性"
+      },
+      "9": {
+        "property_type": 9,
+        "name": "防御力",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_2002.png",
+        "filter_name": "防御力百分比"
+      },
+      "53": {
+        "property_type": 53,
+        "name": "草元素抗性",
+        "icon": "",
+        "filter_name": "草元素抗性"
+      },
+      "80": {
+        "property_type": 80,
+        "name": "冷却缩减",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_80.png",
+        "filter_name": "冷却缩减"
+      },
+      "55": {
+        "property_type": 55,
+        "name": "岩元素抗性",
+        "icon": "",
+        "filter_name": "岩元素抗性"
+      },
+      "44": {
+        "property_type": 44,
+        "name": "风元素伤害加成",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_44.png",
+        "filter_name": "风元素伤害加成"
+      },
+      "81": {
+        "property_type": 81,
+        "name": "护盾强效",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_81.png",
+        "filter_name": "护盾强效"
+      },
+      "5": {
+        "property_type": 5,
+        "name": "攻击力",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_2001.png",
+        "filter_name": "攻击力"
+      },
+      "40": {
+        "property_type": 40,
+        "name": "火元素伤害加成",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_40.png",
+        "filter_name": "火元素伤害加成"
+      },
+      "8": {
+        "property_type": 8,
+        "name": "防御力",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_2002.png",
+        "filter_name": "防御力"
+      },
+      "41": {
+        "property_type": 41,
+        "name": "雷元素伤害加成",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_41.png",
+        "filter_name": "雷元素伤害加成"
+      },
+      "43": {
+        "property_type": 43,
+        "name": "草元素伤害加成",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_43.png",
+        "filter_name": "草元素伤害加成"
+      },
+      "27": {
+        "property_type": 27,
+        "name": "受治疗加成",
+        "icon": "",
+        "filter_name": "受治疗加成"
+      },
+      "7": {
+        "property_type": 7,
+        "name": "基础防御力",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_2002.png",
+        "filter_name": "基础防御力"
+      },
+      "28": {
+        "property_type": 28,
+        "name": "元素精通",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_28.png",
+        "filter_name": "元素精通"
+      },
+      "45": {
+        "property_type": 45,
+        "name": "岩元素伤害加成",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_45.png",
+        "filter_name": "岩元素伤害加成"
+      },
+      "23": {
+        "property_type": 23,
+        "name": "元素充能效率",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_23.png",
+        "filter_name": "元素充能效率"
+      },
+      "3": {
+        "property_type": 3,
+        "name": "生命值",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_2000.png",
+        "filter_name": "生命值百分比"
+      },
+      "6": {
+        "property_type": 6,
+        "name": "攻击力",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_2001.png",
+        "filter_name": "攻击力百分比"
+      },
+      "1": {
+        "property_type": 1,
+        "name": "基础生命值",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_2000.png",
+        "filter_name": "基础生命值"
+      },
+      "22": {
+        "property_type": 22,
+        "name": "暴击伤害",
+        "icon": "",
+        "filter_name": "暴击伤害"
+      },
+      "26": {
+        "property_type": 26,
+        "name": "治疗加成",
+        "icon": "https://act-webstatic.mihoyo.com/game_record/genshin/avatar_prop/avatar_prop_26.png",
+        "filter_name": "治疗加成"
+      }
+    },
+    "relic_property_options": {
+      "sand_main_property_list": [
+        3,
+        6,
+        9,
+        28,
+        23
+      ],
+      "goblet_main_property_list": [
+        3,
+        6,
+        9,
+        28,
+        30,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "circlet_main_property_list": [
+        3,
+        6,
+        9,
+        28,
+        20,
+        22,
+        26
+      ],
+      "sub_property_list": [
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        20,
+        22,
+        28,
+        23
+      ]
+    },
+    "relic_wiki": {
+      "94523": "https://baike.mihoyo.com/ys/obc/content/2322/detail?bbs_presentation_style=no_header",
+      "94553": "https://baike.mihoyo.com/ys/obc/content/2322/detail?bbs_presentation_style=no_header",
+      "76553": "https://baike.mihoyo.com/ys/obc/content/1630/detail?bbs_presentation_style=no_header",
+      "76543": "https://baike.mihoyo.com/ys/obc/content/1630/detail?bbs_presentation_style=no_header",
+      "76513": "https://baike.mihoyo.com/ys/obc/content/1630/detail?bbs_presentation_style=no_header",
+      "76524": "https://baike.mihoyo.com/ys/obc/content/1630/detail?bbs_presentation_style=no_header",
+      "94543": "https://baike.mihoyo.com/ys/obc/content/2322/detail?bbs_presentation_style=no_header",
+      "94513": "https://baike.mihoyo.com/ys/obc/content/2322/detail?bbs_presentation_style=no_header",
+      "34533": "https://baike.mihoyo.com/ys/obc/content/500422/detail?bbs_presentation_style=no_header",
+      "80534": "https://baike.mihoyo.com/ys/obc/content/1563/detail?bbs_presentation_style=no_header"
+    },
+    "weapon_wiki": {
+      "13407": "https://baike.mihoyo.com/ys/obc/content/1079/detail?bbs_presentation_style=no_header",
+      "11418": "https://baike.mihoyo.com/ys/obc/content/5019/detail?bbs_presentation_style=no_header"
+    },
+    "avatar_wiki": {
+      "10000047": "https://baike.mihoyo.com/ys/obc/content/2142/detail?bbs_presentation_style=no_header",
+      "10000052": "https://baike.mihoyo.com/ys/obc/content/2404/detail?bbs_presentation_style=no_header"
+    }
+  }
+}
+
+```
+
+</details>
 
 ### 带有_analysed方法（分析后）的返回
+
+- X character_info的分析（懒+还不会用图片）
 
 <details>
 
@@ -4472,8 +5592,1945 @@
 ```
 
 </details>
+<details>
+<summary>character_list方法返回</summary>
+
+```json
+[
+  {
+    "retcode": 0,
+    "message": "OK",
+    "data": {
+      "avatar_list": [
+        {
+          "id": 1209,
+          "level": 80,
+          "name": "彦卿",
+          "element": "ice",
+          "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/a754e5c6273454f94531a5be052fd2ff.png",
+          "rarity": 5,
+          "rank": 2,
+          "is_chosen": true,
+          "equip": {
+            "id": 21003,
+            "level": 80,
+            "rank": 3,
+            "name": "唯有沉默",
+            "desc": "<i>「已经到站了，不下车吗？」</i>\n头顶传来一声轻笑。他的眼睛动了动，没有抬头。\n\n<i>「事先说明，小三月总说你面无表情，我可不这么觉得。」\n「列车智库的数据有更新输入的痕迹，但是却没保存结果。」\n「所以…哪个条目还能难住你？」</i>\n\n他捏紧了笔，看着笔记本上那个仅凭印象复写而成的惨烈之景。\n\n<i>「原来如此，是关于你自己的事……」</i>",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/299bdb3081ea7ce532e3de6bc1af182c.png",
+            "rarity": 4
+          },
+          "base_type": 2,
+          "figure_path": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/3f86195f49997452a7a0b1774c976349.png",
+          "element_id": 4
+        },
+        {
+          "id": 1204,
+          "level": 80,
+          "name": "景元",
+          "element": "lightning",
+          "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/2cc4863f95f3858a959695597dbc53c4.png",
+          "rarity": 5,
+          "rank": 0,
+          "is_chosen": true,
+          "equip": {
+            "id": 24004,
+            "level": 80,
+            "rank": 5,
+            "name": "不息的演算",
+            "desc": "永恒地悬停于虚空之中，\n闪耀的数据如洪流般涌入祂的脑海。\n将过去未来的万物化作符号，\n祂于初始之刻推演终末之时。\n知识，答案，真相……\n信息的迷雾中升腾起璀璨的光，\n于是一切对祂都已澄明。",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/fad8f1fa155ddbd5e70b97c886e30619.png",
+            "rarity": 5
+          },
+          "base_type": 3,
+          "figure_path": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/71410152ea6fd1826e8ccfb99401607c.png",
+          "element_id": 8
+        }
+      ],
+      "uid": "11******4",
+      "nickname": "暮晓",
+      "region": "prod_gf_cn"
+    }
+  }
+]
+```
+
+</details>
+<details>
+<summary>character_info方法返回</summary>
+
+```json
+{
+  "retcode": 0,
+  "message": "OK",
+  "data": {
+    "avatar_list": [
+      {
+        "id": 1209,
+        "level": 80,
+        "name": "彦卿",
+        "element": "ice",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/a754e5c6273454f94531a5be052fd2ff.png",
+        "rarity": 5,
+        "rank": 2,
+        "image": "https://act-webstatic.mihoyo.com/game_record/hkrpg/custom/avatar_image/1209@2x.png",
+        "equip": {
+          "id": 21003,
+          "level": 80,
+          "rank": 3,
+          "name": "唯有沉默",
+          "desc": "\u003ci\u003e「已经到站了，不下车吗？」\u003c/i\u003e\n头顶传来一声轻笑。他的眼睛动了动，没有抬头。\n\n\u003ci\u003e「事先说明，小三月总说你面无表情，我可不这么觉得。」\n「列车智库的数据有更新输入的痕迹，但是却没保存结果。」\n「所以…哪个条目还能难住你？」\u003c/i\u003e\n\n他捏紧了笔，看着笔记本上那个仅凭印象复写而成的惨烈之景。\n\n\u003ci\u003e「原来如此，是关于你自己的事……」\u003c/i\u003e",
+          "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/299bdb3081ea7ce532e3de6bc1af182c.png",
+          "rarity": 4
+        },
+        "relics": [
+          {
+            "id": 61041,
+            "level": 15,
+            "pos": 1,
+            "name": "雪猎的荒神兜帽",
+            "desc": "巨大的雪原熊头部毛皮做成的兜帽。毛皮似乎寄宿鬼神，刀枪不入。",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/324c796bc94d12a5f5efde51d5bbe681.png",
+            "rarity": 5,
+            "main_property": {
+              "property_type": 27,
+              "value": "705",
+              "times": 0
+            },
+            "properties": [
+              {
+                "property_type": 29,
+                "value": "52",
+                "times": 3
+              },
+              {
+                "property_type": 34,
+                "value": "4.8%",
+                "times": 1
+              },
+              {
+                "property_type": 52,
+                "value": "5.1%",
+                "times": 2
+              },
+              {
+                "property_type": 59,
+                "value": "10.3%",
+                "times": 2
+              }
+            ]
+          },
+          {
+            "id": 61042,
+            "level": 15,
+            "pos": 2,
+            "name": "雪猎的巨蜥手套",
+            "desc": "雪岩巨蜥的鳞爪与战术手套紧密缝合起来，可以在任何墙面上自由地攀爬悬挂。",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/e348cd8194bafcd9c268a11cfc801ddd.png",
+            "rarity": 5,
+            "main_property": {
+              "property_type": 29,
+              "value": "352",
+              "times": 0
+            },
+            "properties": [
+              {
+                "property_type": 27,
+                "value": "76",
+                "times": 2
+              },
+              {
+                "property_type": 33,
+                "value": "15.1%",
+                "times": 4
+              },
+              {
+                "property_type": 56,
+                "value": "3.8%",
+                "times": 1
+              },
+              {
+                "property_type": 57,
+                "value": "3.8%",
+                "times": 1
+              }
+            ]
+          },
+          {
+            "id": 61043,
+            "level": 15,
+            "pos": 3,
+            "name": "雪猎的冰龙披风",
+            "desc": "由冰龙细鳞制作的披风，在奇妙光学折射下，近乎隐形。",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/62e883b578abde6816b9bb0dda156d45.png",
+            "rarity": 5,
+            "main_property": {
+              "property_type": 52,
+              "value": "32.4%",
+              "times": 0
+            },
+            "properties": [
+              {
+                "property_type": 29,
+                "value": "21",
+                "times": 1
+              },
+              {
+                "property_type": 34,
+                "value": "10.8%",
+                "times": 2
+              },
+              {
+                "property_type": 51,
+                "value": "6",
+                "times": 3
+              },
+              {
+                "property_type": 57,
+                "value": "8.6%",
+                "times": 2
+              }
+            ]
+          },
+          {
+            "id": 61044,
+            "level": 15,
+            "pos": 4,
+            "name": "雪猎的鹿皮软靴",
+            "desc": "麋鹿柔软的毛皮包裹着增强动力靴，在雪原，猎户的鞋底只会留下浅浅的印记。",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/3401e9536c3eebc79db905955dca4fdd.png",
+            "rarity": 5,
+            "main_property": {
+              "property_type": 33,
+              "value": "43.2%",
+              "times": 0
+            },
+            "properties": [
+              {
+                "property_type": 27,
+                "value": "42",
+                "times": 1
+              },
+              {
+                "property_type": 52,
+                "value": "8.4%",
+                "times": 3
+              },
+              {
+                "property_type": 57,
+                "value": "10.8%",
+                "times": 3
+              },
+              {
+                "property_type": 59,
+                "value": "5.1%",
+                "times": 1
+              }
+            ]
+          }
+        ],
+        "ornaments": [
+          {
+            "id": 63015,
+            "level": 15,
+            "pos": 5,
+            "name": "「黑塔」的空间站点",
+            "desc": "位面封装的是「黑塔」空间站，它停靠在湛蓝星上空，沿着既定轨道缓缓漂流，寂静的银河像是本书卷等待翻阅。",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/11c911c91cff3e5eb8a33ab69c67439b.png",
+            "rarity": 5,
+            "main_property": {
+              "property_type": 16,
+              "value": "38.8%",
+              "times": 0
+            },
+            "properties": [
+              {
+                "property_type": 29,
+                "value": "59",
+                "times": 3
+              },
+              {
+                "property_type": 33,
+                "value": "4.3%",
+                "times": 1
+              },
+              {
+                "property_type": 53,
+                "value": "11.6%",
+                "times": 2
+              },
+              {
+                "property_type": 59,
+                "value": "12.3%",
+                "times": 2
+              }
+            ]
+          },
+          {
+            "id": 63016,
+            "level": 15,
+            "pos": 6,
+            "name": "「黑塔」的漫历轨迹",
+            "desc": "「黑塔」空间站建立起那一刻，黑塔女士便失去了兴致。它在湛蓝星上空保持着第一宇宙速度，在卫星轨道上留下环绕的轨迹。",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/d011d75333f0595b4c2450afb69b0168.png",
+            "rarity": 5,
+            "main_property": {
+              "property_type": 54,
+              "value": "19.4%",
+              "times": 0
+            },
+            "properties": [
+              {
+                "property_type": 29,
+                "value": "59",
+                "times": 3
+              },
+              {
+                "property_type": 31,
+                "value": "19",
+                "times": 1
+              },
+              {
+                "property_type": 53,
+                "value": "11.6%",
+                "times": 2
+              },
+              {
+                "property_type": 57,
+                "value": "6.9%",
+                "times": 2
+              }
+            ]
+          }
+        ],
+        "ranks": [
+          {
+            "id": 120901,
+            "pos": 1,
+            "name": "素刃",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/35fa573cdf76fe24b7ee1d14c4fe2381.png",
+            "desc": "当彦卿攻击敌方目标时，如果目标处于冻结状态，则立即对目标造成等同于彦卿60%攻击力的冰属性附加伤害。",
+            "is_unlocked": true
+          },
+          {
+            "id": 120902,
+            "pos": 2,
+            "name": "空明",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/27dc8a2054162e8dba51eaae456b466c.png",
+            "desc": "处于【智剑连心】效果时，额外提高10%的能量恢复效率。",
+            "is_unlocked": true
+          },
+          {
+            "id": 120903,
+            "pos": 3,
+            "name": "剑胎",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/8262f7c55ebe416182f3c343f2295398.png",
+            "desc": "战技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+            "is_unlocked": false
+          },
+          {
+            "id": 120904,
+            "pos": 4,
+            "name": "霜厉",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/47f3001cb3a9853ed3307bde5231ba2f.png",
+            "desc": "当前生命值百分比大于等于80%时，提高自身12%的冰属性抗性穿透。",
+            "is_unlocked": false
+          },
+          {
+            "id": 120905,
+            "pos": 5,
+            "name": "武骨",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/5b1c2852ea3b29c8f72543adfa869d9e.png",
+            "desc": "终结技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+            "is_unlocked": false
+          },
+          {
+            "id": 120906,
+            "pos": 6,
+            "name": "自在",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/0b9275eefbaee7759865b3269443f365.png",
+            "desc": "消灭敌方目标时，如果当前持有【智剑连心】或终结技的增益效果，则使这些增益效果的持续时间全部延长1回合。",
+            "is_unlocked": false
+          }
+        ],
+        "properties": [
+          {
+            "property_type": 1,
+            "base": "1845",
+            "add": "1008",
+            "final": "2853"
+          },
+          {
+            "property_type": 2,
+            "base": "1155",
+            "add": "2008",
+            "final": "3164"
+          },
+          {
+            "property_type": 3,
+            "base": "743",
+            "add": "135",
+            "final": "878"
+          },
+          {
+            "property_type": 4,
+            "base": "109",
+            "add": "6",
+            "final": "115"
+          },
+          {
+            "property_type": 5,
+            "base": "51.0%",
+            "add": "0.0%",
+            "final": "51.0%"
+          },
+          {
+            "property_type": 6,
+            "base": "73.3%",
+            "add": "0.0%",
+            "final": "73.3%"
+          },
+          {
+            "property_type": 16,
+            "base": "63.2%",
+            "add": "0.0%",
+            "final": "63.2%"
+          },
+          {
+            "property_type": 58,
+            "base": "27.8%",
+            "add": "0.0%",
+            "final": "27.8%"
+          },
+          {
+            "property_type": 7,
+            "base": "0.0%",
+            "add": "0.0%",
+            "final": "0.0%"
+          },
+          {
+            "property_type": 9,
+            "base": "119.4%",
+            "add": "0.0%",
+            "final": "119.4%"
+          },
+          {
+            "property_type": 10,
+            "base": "3.8%",
+            "add": "0.0%",
+            "final": "3.8%"
+          },
+          {
+            "property_type": 11,
+            "base": "30.2%",
+            "add": "0.0%",
+            "final": "30.2%"
+          }
+        ],
+        "skills": [
+          {
+            "point_id": "1209001",
+            "point_type": 2,
+            "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/cd5fd88cac5b4f7a72b35f24e3dc2cb8.png",
+            "level": 6,
+            "is_activated": true,
+            "is_rank_work": false,
+            "pre_point": "0",
+            "anchor": "Point01",
+            "remake": "普攻",
+            "skill_stages": [
+              {
+                "desc": "对指定敌方单体造成等同于彦卿100%攻击力的冰属性伤害。",
+                "name": "霜锋点寒芒",
+                "level": 6,
+                "remake": "普攻",
+                "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/4501a7f0bad985805a198cda54ced2a7.png",
+                "is_activated": true,
+                "is_rank_work": false
+              }
+            ]
+          },
+          {
+            "point_id": "1209002",
+            "point_type": 2,
+            "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/494b0cbd4af2245266796b77c73c401f.png",
+            "level": 10,
+            "is_activated": true,
+            "is_rank_work": false,
+            "pre_point": "0",
+            "anchor": "Point02",
+            "remake": "战技",
+            "skill_stages": [
+              {
+                "desc": "对指定敌方单体造成等同于彦卿220%攻击力的冰属性伤害，并为彦卿附加【智剑连心】，持续1回合。",
+                "name": "遥击三尺水",
+                "level": 10,
+                "remake": "战技",
+                "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/6acc0037652e7ad6105cda5e2e51f8be.png",
+                "is_activated": true,
+                "is_rank_work": false
+              }
+            ]
+          },
+          {
+            "point_id": "1209003",
+            "point_type": 2,
+            "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/a59185509afe5003a40198155dd7ceee.png",
+            "level": 10,
+            "is_activated": true,
+            "is_rank_work": false,
+            "pre_point": "0",
+            "anchor": "Point03",
+            "remake": "终结技",
+            "skill_stages": [
+              {
+                "desc": "提高自身60%暴击率，若彦卿处于【智剑连心】效果，则使其暴击伤害额外提高50%，增益效果持续1回合。随后对指定敌方单体造成等同于彦卿350%攻击力的冰属性伤害。",
+                "name": "快雨燕相逐",
+                "level": 10,
+                "remake": "终结技",
+                "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/2b17c4f8206c31f5fdfda61c168b6e07.png",
+                "is_activated": true,
+                "is_rank_work": false
+              }
+            ]
+          },
+          {
+            "point_id": "1209004",
+            "point_type": 2,
+            "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/c6f11cf8859741823c902dbcf33a78eb.png",
+            "level": 9,
+            "is_activated": true,
+            "is_rank_work": false,
+            "pre_point": "0",
+            "anchor": "Point04",
+            "remake": "天赋",
+            "skill_stages": [
+              {
+                "desc": "彦卿处于【智剑连心】效果时，受到攻击的概率降低，并为自身提高19.3%暴击率和28%暴击伤害。对敌方目标施放攻击后，有58%的固定概率发动追加攻击，对目标造成等同于彦卿46%攻击力的冰属性伤害，并有65%的基础概率使其陷入冻结状态，持续1回合。\n冻结状态下，敌方目标不能行动，同时每回合开始时受到等同于彦卿46%攻击力的冰属性附加伤害。\n当彦卿受到伤害后，【智剑连心】将会消失。",
+                "name": "呼剑如影",
+                "level": 9,
+                "remake": "天赋",
+                "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/b83d91f4508a7bfc04da073be5cc07cc.png",
+                "is_activated": true,
+                "is_rank_work": false
+              }
+            ]
+          },
+          {
+            "point_id": "1209007",
+            "point_type": 2,
+            "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/5e3291c9dff6c42782c7eb8efa5b0cb2.png",
+            "level": 1,
+            "is_activated": true,
+            "is_rank_work": false,
+            "pre_point": "0",
+            "anchor": "Point05",
+            "remake": "秘技",
+            "skill_stages": [
+              {
+                "desc": "使用秘技后，下一次战斗开始时彦卿对当前生命值百分比大于等于50%的敌方目标造成的伤害提高30%，持续2回合。",
+                "name": "御剑真诀",
+                "level": 1,
+                "remake": "秘技",
+                "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/e3ebc01a698a0622f27a27ae2e366c80.png",
+                "is_activated": true,
+                "is_rank_work": false
+              }
+            ]
+          },
+          {
+            "point_id": "1209101",
+            "point_type": 3,
+            "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/5a1ac15f88c3b02b01375cd9f4fe25f6.png",
+            "level": 1,
+            "is_activated": true,
+            "is_rank_work": false,
+            "pre_point": "0",
+            "anchor": "Point06",
+            "remake": "额外能力",
+            "skill_stages": [
+              {
+                "desc": "施放攻击后，对携带冰属性弱点的敌方目标造成等同于彦卿30%攻击力的冰属性附加伤害。",
+                "name": "颁冰",
+                "level": 1,
+                "remake": "额外能力",
+                "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/5a1ac15f88c3b02b01375cd9f4fe25f6.png",
+                "is_activated": true,
+                "is_rank_work": false
+              }
+            ]
+          },
+          {
+            "point_id": "1209102",
+            "point_type": 3,
+            "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/301406ad1572af9f90e5c853c57091fb.png",
+            "level": 1,
+            "is_activated": true,
+            "is_rank_work": false,
+            "pre_point": "0",
+            "anchor": "Point07",
+            "remake": "额外能力",
+            "skill_stages": [
+              {
+                "desc": "处于【智剑连心】效果时，效果抵抗提高20%。",
+                "name": "凌霜",
+                "level": 1,
+                "remake": "额外能力",
+                "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/301406ad1572af9f90e5c853c57091fb.png",
+                "is_activated": true,
+                "is_rank_work": false
+              }
+            ]
+          },
+          {
+            "point_id": "1209103",
+            "point_type": 3,
+            "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/8cf74422cbe7b796ebcab6fdafb42b5a.png",
+            "level": 1,
+            "is_activated": true,
+            "is_rank_work": false,
+            "pre_point": "0",
+            "anchor": "Point08",
+            "remake": "额外能力",
+            "skill_stages": [
+              {
+                "desc": "触发暴击时，速度提高10%，持续2回合。",
+                "name": "轻吕",
+                "level": 1,
+                "remake": "额外能力",
+                "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/8cf74422cbe7b796ebcab6fdafb42b5a.png",
+                "is_activated": true,
+                "is_rank_work": false
+              }
+            ]
+          },
+          {
+            "point_id": "1209201",
+            "point_type": 1,
+            "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/f7b1763a85dfed88ac1584fed8eee74b.png",
+            "level": 1,
+            "is_activated": true,
+            "is_rank_work": false,
+            "pre_point": "0",
+            "anchor": "Point09",
+            "remake": "属性加成",
+            "skill_stages": [
+              {
+                "desc": "",
+                "name": "攻击强化",
+                "level": 1,
+                "remake": "属性加成",
+                "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/f7b1763a85dfed88ac1584fed8eee74b.png",
+                "is_activated": true,
+                "is_rank_work": false
+              }
+            ]
+          },
+          {
+            "point_id": "1209203",
+            "point_type": 1,
+            "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/f7b1763a85dfed88ac1584fed8eee74b.png",
+            "level": 1,
+            "is_activated": true,
+            "is_rank_work": false,
+            "pre_point": "1209202",
+            "anchor": "Point11",
+            "remake": "属性加成",
+            "skill_stages": [
+              {
+                "desc": "",
+                "name": "攻击强化",
+                "level": 1,
+                "remake": "属性加成",
+                "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/f7b1763a85dfed88ac1584fed8eee74b.png",
+                "is_activated": true,
+                "is_rank_work": false
+              }
+            ]
+          },
+          {
+            "point_id": "1209205",
+            "point_type": 1,
+            "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/f7b1763a85dfed88ac1584fed8eee74b.png",
+            "level": 1,
+            "is_activated": true,
+            "is_rank_work": false,
+            "pre_point": "1209102",
+            "anchor": "Point13",
+            "remake": "属性加成",
+            "skill_stages": [
+              {
+                "desc": "",
+                "name": "攻击强化",
+                "level": 1,
+                "remake": "属性加成",
+                "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/f7b1763a85dfed88ac1584fed8eee74b.png",
+                "is_activated": true,
+                "is_rank_work": false
+              }
+            ]
+          },
+          {
+            "point_id": "1209207",
+            "point_type": 1,
+            "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/f7b1763a85dfed88ac1584fed8eee74b.png",
+            "level": 1,
+            "is_activated": true,
+            "is_rank_work": false,
+            "pre_point": "0",
+            "anchor": "Point15",
+            "remake": "属性加成",
+            "skill_stages": [
+              {
+                "desc": "",
+                "name": "攻击强化",
+                "level": 1,
+                "remake": "属性加成",
+                "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/f7b1763a85dfed88ac1584fed8eee74b.png",
+                "is_activated": true,
+                "is_rank_work": false
+              }
+            ]
+          },
+          {
+            "point_id": "1209210",
+            "point_type": 1,
+            "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/f7b1763a85dfed88ac1584fed8eee74b.png",
+            "level": 1,
+            "is_activated": true,
+            "is_rank_work": false,
+            "pre_point": "1209208",
+            "anchor": "Point18",
+            "remake": "属性加成",
+            "skill_stages": [
+              {
+                "desc": "",
+                "name": "攻击强化",
+                "level": 1,
+                "remake": "属性加成",
+                "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/f7b1763a85dfed88ac1584fed8eee74b.png",
+                "is_activated": true,
+                "is_rank_work": false
+              }
+            ]
+          },
+          {
+            "point_id": "1209202",
+            "point_type": 1,
+            "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/7f8d5b6837360cfeda065f2206e89b8a.png",
+            "level": 1,
+            "is_activated": true,
+            "is_rank_work": false,
+            "pre_point": "1209101",
+            "anchor": "Point10",
+            "remake": "属性加成",
+            "skill_stages": [
+              {
+                "desc": "",
+                "name": "伤害强化•冰",
+                "level": 1,
+                "remake": "属性加成",
+                "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/7f8d5b6837360cfeda065f2206e89b8a.png",
+                "is_activated": true,
+                "is_rank_work": false
+              }
+            ]
+          },
+          {
+            "point_id": "1209206",
+            "point_type": 1,
+            "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/7f8d5b6837360cfeda065f2206e89b8a.png",
+            "level": 1,
+            "is_activated": true,
+            "is_rank_work": false,
+            "pre_point": "1209205",
+            "anchor": "Point14",
+            "remake": "属性加成",
+            "skill_stages": [
+              {
+                "desc": "",
+                "name": "伤害强化•冰",
+                "level": 1,
+                "remake": "属性加成",
+                "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/7f8d5b6837360cfeda065f2206e89b8a.png",
+                "is_activated": true,
+                "is_rank_work": false
+              }
+            ]
+          },
+          {
+            "point_id": "1209209",
+            "point_type": 1,
+            "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/7f8d5b6837360cfeda065f2206e89b8a.png",
+            "level": 1,
+            "is_activated": true,
+            "is_rank_work": false,
+            "pre_point": "1209208",
+            "anchor": "Point17",
+            "remake": "属性加成",
+            "skill_stages": [
+              {
+                "desc": "",
+                "name": "伤害强化•冰",
+                "level": 1,
+                "remake": "属性加成",
+                "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/7f8d5b6837360cfeda065f2206e89b8a.png",
+                "is_activated": true,
+                "is_rank_work": false
+              }
+            ]
+          },
+          {
+            "point_id": "1209204",
+            "point_type": 1,
+            "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/00a5cfa9ab538e622eabd8d4b8d9abf5.png",
+            "level": 1,
+            "is_activated": true,
+            "is_rank_work": false,
+            "pre_point": "0",
+            "anchor": "Point12",
+            "remake": "属性加成",
+            "skill_stages": [
+              {
+                "desc": "",
+                "name": "生命强化",
+                "level": 1,
+                "remake": "属性加成",
+                "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/00a5cfa9ab538e622eabd8d4b8d9abf5.png",
+                "is_activated": true,
+                "is_rank_work": false
+              }
+            ]
+          },
+          {
+            "point_id": "1209208",
+            "point_type": 1,
+            "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/00a5cfa9ab538e622eabd8d4b8d9abf5.png",
+            "level": 1,
+            "is_activated": true,
+            "is_rank_work": false,
+            "pre_point": "1209103",
+            "anchor": "Point16",
+            "remake": "属性加成",
+            "skill_stages": [
+              {
+                "desc": "",
+                "name": "生命强化",
+                "level": 1,
+                "remake": "属性加成",
+                "item_url": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/00a5cfa9ab538e622eabd8d4b8d9abf5.png",
+                "is_activated": true,
+                "is_rank_work": false
+              }
+            ]
+          }
+        ],
+        "base_type": 2,
+        "figure_path": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/3f86195f49997452a7a0b1774c976349.png",
+        "element_id": 4,
+        "servant_detail": {
+          "servant_id": "0",
+          "servant_name": "",
+          "servant_icon": "",
+          "servant_properties": [],
+          "servant_skills": []
+        }
+      }
+    ],
+    "equip_wiki": {},
+    "relic_wiki": {},
+    "property_info": {
+      "6": {
+        "property_type": 6,
+        "name": "暴击伤害",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/52b38f420abc77ec52ebae0eeff34a6c.png",
+        "property_name_relic": "暴击伤害",
+        "property_name_filter": "暴击伤害"
+      },
+      "53": {
+        "property_type": 53,
+        "name": "暴击伤害",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/52b38f420abc77ec52ebae0eeff34a6c.png",
+        "property_name_relic": "暴击伤害",
+        "property_name_filter": "暴击伤害"
+      },
+      "56": {
+        "property_type": 56,
+        "name": "效果命中",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/f93a34aa787b2e8612b36f57205f1c05.png",
+        "property_name_relic": "效果命中",
+        "property_name_filter": "效果命中"
+      },
+      "27": {
+        "property_type": 27,
+        "name": "生命值",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/61b6b743a7cce69102b47d58ec609781.png",
+        "property_name_relic": "生命值",
+        "property_name_filter": "生命值"
+      },
+      "36": {
+        "property_type": 36,
+        "name": "受治疗量提高#1[f1]%",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/a3a78104abf00dbae2c86f7567ab9576.png",
+        "property_name_relic": "治疗量加成",
+        "property_name_filter": "治疗量加成"
+      },
+      "28": {
+        "property_type": 28,
+        "name": "基础攻击力",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/30adbb1fe9673b601ac7f84b8ede6db5.png",
+        "property_name_relic": "基础攻击力提高#1[i]",
+        "property_name_filter": "基础攻击力提高#1[i]"
+      },
+      "8": {
+        "property_type": 8,
+        "name": "",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/b2e2a6c68a6f5ec05db8683b905c78d7.png",
+        "property_name_relic": "",
+        "property_name_filter": ""
+      },
+      "32": {
+        "property_type": 32,
+        "name": "生命值",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/61b6b743a7cce69102b47d58ec609781.png",
+        "property_name_relic": "生命值",
+        "property_name_filter": "生命值百分比"
+      },
+      "34": {
+        "property_type": 34,
+        "name": "防御力",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/0e301e02745dd87e35ba5d96eb44e524.png",
+        "property_name_relic": "防御力",
+        "property_name_filter": "防御力百分比"
+      },
+      "20": {
+        "property_type": 20,
+        "name": "风属性伤害提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/8a6302c4a3cd6f4b956283a3dc48623d.png",
+        "property_name_relic": "风属性伤害提高",
+        "property_name_filter": "风属性伤害提高"
+      },
+      "13": {
+        "property_type": 13,
+        "name": "物理属性抗性提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/a550b5bc19cfff7c4fd0c8d515569db1.png",
+        "property_name_relic": "物理属性抗性提高",
+        "property_name_filter": "物理属性抗性提高"
+      },
+      "39": {
+        "property_type": 39,
+        "name": "冰属性抗性提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/425bac4124550db231ad137bd4624e79.png",
+        "property_name_relic": "冰属性抗性提高",
+        "property_name_filter": "冰属性抗性提高"
+      },
+      "26": {
+        "property_type": 26,
+        "name": "基础生命值",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/61b6b743a7cce69102b47d58ec609781.png",
+        "property_name_relic": "基础生命值提高#1[i]",
+        "property_name_filter": "基础生命值提高#1[i]"
+      },
+      "58": {
+        "property_type": 58,
+        "name": "击破特攻",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/69385e27d1633e7990c752e48ec8457b.png",
+        "property_name_relic": "击破特攻",
+        "property_name_filter": "击破特攻"
+      },
+      "40": {
+        "property_type": 40,
+        "name": "雷属性抗性提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/9a611471754dc3216a128fae91234ed7.png",
+        "property_name_relic": "雷属性抗性提高",
+        "property_name_filter": "雷属性抗性提高"
+      },
+      "55": {
+        "property_type": 55,
+        "name": "治疗量加成",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/a3a78104abf00dbae2c86f7567ab9576.png",
+        "property_name_relic": "治疗量加成",
+        "property_name_filter": "治疗量加成"
+      },
+      "35": {
+        "property_type": 35,
+        "name": "速度",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/8dd6822bcd2de483ca129650b3a38f2f.png",
+        "property_name_relic": "速度",
+        "property_name_filter": "速度"
+      },
+      "59": {
+        "property_type": 59,
+        "name": "击破特攻",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/69385e27d1633e7990c752e48ec8457b.png",
+        "property_name_relic": "击破特攻",
+        "property_name_filter": "击破特攻"
+      },
+      "42": {
+        "property_type": 42,
+        "name": "量子属性抗性提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/f68354239e2130bd4e413274eb74b9b9.png",
+        "property_name_relic": "量子属性抗性提高",
+        "property_name_filter": "量子属性抗性提高"
+      },
+      "11": {
+        "property_type": 11,
+        "name": "效果抵抗",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/ef9ed77d4006cb43e964d5bcb64355ef.png",
+        "property_name_relic": "效果抵抗",
+        "property_name_filter": "效果抵抗"
+      },
+      "43": {
+        "property_type": 43,
+        "name": "虚数属性抗性提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/1ed14c31a597fd2f6564d2c81c3a642d.png",
+        "property_name_relic": "虚数属性抗性提高",
+        "property_name_filter": "虚数属性抗性提高"
+      },
+      "2": {
+        "property_type": 2,
+        "name": "攻击力",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/30adbb1fe9673b601ac7f84b8ede6db5.png",
+        "property_name_relic": "攻击力",
+        "property_name_filter": "攻击力"
+      },
+      "15": {
+        "property_type": 15,
+        "name": "火属性抗性提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/19c311ea2b9704f88deaf56a7919328f.png",
+        "property_name_relic": "火属性抗性提高",
+        "property_name_filter": "火属性抗性提高"
+      },
+      "14": {
+        "property_type": 14,
+        "name": "火属性伤害提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/70f08e97a86580846153091538bda7db.png",
+        "property_name_relic": "火属性伤害提高",
+        "property_name_filter": "火属性伤害提高"
+      },
+      "38": {
+        "property_type": 38,
+        "name": "火属性抗性提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/19c311ea2b9704f88deaf56a7919328f.png",
+        "property_name_relic": "火属性抗性提高",
+        "property_name_filter": "火属性抗性提高"
+      },
+      "19": {
+        "property_type": 19,
+        "name": "雷属性抗性提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/9a611471754dc3216a128fae91234ed7.png",
+        "property_name_relic": "雷属性抗性提高",
+        "property_name_filter": "雷属性抗性提高"
+      },
+      "5": {
+        "property_type": 5,
+        "name": "暴击率",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/e785ef2b39fa79843f7277fffcb0068d.png",
+        "property_name_relic": "暴击率",
+        "property_name_filter": "暴击率"
+      },
+      "29": {
+        "property_type": 29,
+        "name": "攻击力",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/30adbb1fe9673b601ac7f84b8ede6db5.png",
+        "property_name_relic": "攻击力",
+        "property_name_filter": "攻击力"
+      },
+      "30": {
+        "property_type": 30,
+        "name": "基础防御力",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/0e301e02745dd87e35ba5d96eb44e524.png",
+        "property_name_relic": "基础防御力提高#1[i]",
+        "property_name_filter": "基础防御力提高#1[i]"
+      },
+      "3": {
+        "property_type": 3,
+        "name": "防御力",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/0e301e02745dd87e35ba5d96eb44e524.png",
+        "property_name_relic": "防御力",
+        "property_name_filter": "防御力"
+      },
+      "52": {
+        "property_type": 52,
+        "name": "暴击率",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/e785ef2b39fa79843f7277fffcb0068d.png",
+        "property_name_relic": "暴击率",
+        "property_name_filter": "暴击率"
+      },
+      "16": {
+        "property_type": 16,
+        "name": "冰属性伤害提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/e0f5c59b7a709b4a42f8060a561ccf4c.png",
+        "property_name_relic": "冰属性伤害提高",
+        "property_name_filter": "冰属性伤害提高"
+      },
+      "9": {
+        "property_type": 9,
+        "name": "能量恢复效率",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/5c41444c8c7ad1eb11301003200a01c8.png",
+        "property_name_relic": "能量恢复效率",
+        "property_name_filter": "能量恢复效率"
+      },
+      "24": {
+        "property_type": 24,
+        "name": "虚数属性伤害提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/0f4b511ab8bed18cdd3604d74862661b.png",
+        "property_name_relic": "虚数属性伤害提高",
+        "property_name_filter": "虚数属性伤害提高"
+      },
+      "23": {
+        "property_type": 23,
+        "name": "量子属性抗性提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/f68354239e2130bd4e413274eb74b9b9.png",
+        "property_name_relic": "量子属性抗性提高",
+        "property_name_filter": "量子属性抗性提高"
+      },
+      "17": {
+        "property_type": 17,
+        "name": "冰属性抗性提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/425bac4124550db231ad137bd4624e79.png",
+        "property_name_relic": "冰属性抗性提高",
+        "property_name_filter": "冰属性抗性提高"
+      },
+      "7": {
+        "property_type": 7,
+        "name": "治疗量加成",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/a3a78104abf00dbae2c86f7567ab9576.png",
+        "property_name_relic": "治疗量加成",
+        "property_name_filter": "治疗量加成"
+      },
+      "22": {
+        "property_type": 22,
+        "name": "量子属性伤害提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/97d20d21a2db396f0aca61ae8e5bc499.png",
+        "property_name_relic": "量子属性伤害提高",
+        "property_name_filter": "量子属性伤害提高"
+      },
+      "21": {
+        "property_type": 21,
+        "name": "风属性抗性提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/69b2c60f4534d374622e0abe0bda86fd.png",
+        "property_name_relic": "风属性抗性提高",
+        "property_name_filter": "风属性抗性提高"
+      },
+      "33": {
+        "property_type": 33,
+        "name": "攻击力",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/30adbb1fe9673b601ac7f84b8ede6db5.png",
+        "property_name_relic": "攻击力",
+        "property_name_filter": "攻击力百分比"
+      },
+      "57": {
+        "property_type": 57,
+        "name": "效果抵抗",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/ef9ed77d4006cb43e964d5bcb64355ef.png",
+        "property_name_relic": "效果抵抗",
+        "property_name_filter": "效果抵抗"
+      },
+      "51": {
+        "property_type": 51,
+        "name": "速度",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/8dd6822bcd2de483ca129650b3a38f2f.png",
+        "property_name_relic": "速度",
+        "property_name_filter": "速度"
+      },
+      "37": {
+        "property_type": 37,
+        "name": "物理属性抗性提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/a550b5bc19cfff7c4fd0c8d515569db1.png",
+        "property_name_relic": "物理属性抗性提高",
+        "property_name_filter": "物理属性抗性提高"
+      },
+      "41": {
+        "property_type": 41,
+        "name": "风属性抗性提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/69b2c60f4534d374622e0abe0bda86fd.png",
+        "property_name_relic": "风属性抗性提高",
+        "property_name_filter": "风属性抗性提高"
+      },
+      "10": {
+        "property_type": 10,
+        "name": "效果命中",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/f93a34aa787b2e8612b36f57205f1c05.png",
+        "property_name_relic": "效果命中",
+        "property_name_filter": "效果命中"
+      },
+      "60": {
+        "property_type": 60,
+        "name": "能量上限",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/1180cd6b6512e44d6d5504f566adbe84.png",
+        "property_name_relic": "能量上限",
+        "property_name_filter": "能量上限"
+      },
+      "31": {
+        "property_type": 31,
+        "name": "防御力",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/0e301e02745dd87e35ba5d96eb44e524.png",
+        "property_name_relic": "防御力",
+        "property_name_filter": "防御力"
+      },
+      "12": {
+        "property_type": 12,
+        "name": "物理属性伤害提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/6a951fac0633eeefc2994fb00bf829a4.png",
+        "property_name_relic": "物理属性伤害提高",
+        "property_name_filter": "物理属性伤害提高"
+      },
+      "4": {
+        "property_type": 4,
+        "name": "速度",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/8dd6822bcd2de483ca129650b3a38f2f.png",
+        "property_name_relic": "速度",
+        "property_name_filter": "速度"
+      },
+      "18": {
+        "property_type": 18,
+        "name": "雷属性伤害提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/488f0cf6040f21de72a7907a07e059fa.png",
+        "property_name_relic": "雷属性伤害提高",
+        "property_name_filter": "雷属性伤害提高"
+      },
+      "25": {
+        "property_type": 25,
+        "name": "虚数属性抗性提高",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/1ed14c31a597fd2f6564d2c81c3a642d.png",
+        "property_name_relic": "虚数属性抗性提高",
+        "property_name_filter": "虚数属性抗性提高"
+      },
+      "1": {
+        "property_type": 1,
+        "name": "生命值",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/61b6b743a7cce69102b47d58ec609781.png",
+        "property_name_relic": "生命值",
+        "property_name_filter": "生命值"
+      },
+      "54": {
+        "property_type": 54,
+        "name": "能量恢复效率",
+        "icon": "https://act-webstatic.mihoyo.com/darkmatter/hkrpg/prod_gf_cn/item_icon_u266yc/5c41444c8c7ad1eb11301003200a01c8.png",
+        "property_name_relic": "能量恢复效率",
+        "property_name_filter": "能量恢复效率"
+      }
+    },
+    "recommend_property": {
+      "1006": {
+        "recommend_relic_properties": [
+          51,
+          56,
+          52,
+          53
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1005": {
+        "recommend_relic_properties": [
+          33,
+          51,
+          56
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1105": {
+        "recommend_relic_properties": [
+          32,
+          51,
+          57
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1009": {
+        "recommend_relic_properties": [
+          51,
+          33,
+          52,
+          53
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1211": {
+        "recommend_relic_properties": [
+          32,
+          51,
+          57
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1302": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1111": {
+        "recommend_relic_properties": [
+          33,
+          51,
+          59
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1201": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1109": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1002": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1215": {
+        "recommend_relic_properties": [
+          51,
+          33,
+          57
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1222": {
+        "recommend_relic_properties": [
+          59,
+          51,
+          33
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1218": {
+        "recommend_relic_properties": [
+          56,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1202": {
+        "recommend_relic_properties": [
+          51,
+          33,
+          57
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1212": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "8007": {
+        "recommend_relic_properties": [
+          53,
+          51,
+          33
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1206": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1004": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1203": {
+        "recommend_relic_properties": [
+          33,
+          51,
+          57
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1310": {
+        "recommend_relic_properties": [
+          59,
+          51,
+          33
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "8006": {
+        "recommend_relic_properties": [
+          59,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1101": {
+        "recommend_relic_properties": [
+          53,
+          51,
+          57
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1224": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1102": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1205": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          32,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1225": {
+        "recommend_relic_properties": [
+          59,
+          51,
+          56
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1402": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1315": {
+        "recommend_relic_properties": [
+          59,
+          51,
+          33,
+          52
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1304": {
+        "recommend_relic_properties": [
+          34,
+          52,
+          53,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1220": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1308": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1307": {
+        "recommend_relic_properties": [
+          33,
+          56,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1104": {
+        "recommend_relic_properties": [
+          34,
+          51,
+          56,
+          57
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1001": {
+        "recommend_relic_properties": [
+          34,
+          51,
+          56,
+          57
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1106": {
+        "recommend_relic_properties": [
+          51,
+          56,
+          52,
+          53
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "8001": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1305": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "8002": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1301": {
+        "recommend_relic_properties": [
+          51,
+          59,
+          57
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1223": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1103": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1314": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1312": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1208": {
+        "recommend_relic_properties": [
+          32,
+          34,
+          57,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "8004": {
+        "recommend_relic_properties": [
+          34,
+          51,
+          57
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1108": {
+        "recommend_relic_properties": [
+          33,
+          51,
+          56
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "8005": {
+        "recommend_relic_properties": [
+          59,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1110": {
+        "recommend_relic_properties": [
+          32,
+          51,
+          57
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1217": {
+        "recommend_relic_properties": [
+          32,
+          51,
+          57
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1309": {
+        "recommend_relic_properties": [
+          33,
+          29,
+          51,
+          57
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1214": {
+        "recommend_relic_properties": [
+          59,
+          52,
+          53,
+          33
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1401": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "8008": {
+        "recommend_relic_properties": [
+          53,
+          51,
+          33
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1209": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1221": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1213": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1207": {
+        "recommend_relic_properties": [
+          51,
+          33,
+          52,
+          53
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1303": {
+        "recommend_relic_properties": [
+          59,
+          51,
+          57
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1306": {
+        "recommend_relic_properties": [
+          53,
+          51,
+          57
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1112": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1008": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1003": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1313": {
+        "recommend_relic_properties": [
+          53,
+          51,
+          57
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1204": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33,
+          51
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1013": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "8003": {
+        "recommend_relic_properties": [
+          34,
+          51,
+          57
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1317": {
+        "recommend_relic_properties": [
+          59,
+          51,
+          33
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1107": {
+        "recommend_relic_properties": [
+          52,
+          53,
+          33
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      },
+      "1210": {
+        "recommend_relic_properties": [
+          33,
+          51,
+          56
+        ],
+        "custom_relic_properties": [],
+        "is_custom_property_valid": false
+      }
+    },
+    "relic_properties": [
+      {
+        "property_type": 27,
+        "modify_property_type": 1
+      },
+      {
+        "property_type": 32,
+        "modify_property_type": 1
+      },
+      {
+        "property_type": 29,
+        "modify_property_type": 2
+      },
+      {
+        "property_type": 33,
+        "modify_property_type": 2
+      },
+      {
+        "property_type": 31,
+        "modify_property_type": 3
+      },
+      {
+        "property_type": 34,
+        "modify_property_type": 3
+      },
+      {
+        "property_type": 51,
+        "modify_property_type": 4
+      },
+      {
+        "property_type": 52,
+        "modify_property_type": 5
+      },
+      {
+        "property_type": 53,
+        "modify_property_type": 6
+      },
+      {
+        "property_type": 59,
+        "modify_property_type": 58
+      },
+      {
+        "property_type": 56,
+        "modify_property_type": 10
+      },
+      {
+        "property_type": 57,
+        "modify_property_type": 11
+      }
+    ]
+  }
+}
+
+```
+
+</details>
 
 ### 带有_analysed方法（分析后）的返回
+
+- X character_info的分析（懒+还不会用图片）
 
 <details>
 <summary>day_analysed方法返回</summary>
@@ -6555,8 +9612,908 @@
 ```
 
 </details>
+<details>
+<summary>character_list方法返回</summary>
+
+```json
+[
+  {
+    "retcode": 0,
+    "message": "OK",
+    "data": {
+      "avatar_list": [
+        {
+          "id": 1191,
+          "level": 60,
+          "name_mi18n": "艾莲",
+          "full_name_mi18n": "艾莲·乔",
+          "element_type": 202,
+          "camp_name_mi18n": "维多利亚家政",
+          "avatar_profession": 1,
+          "rarity": "S",
+          "group_icon_path": "https://act-webstatic.mihoyo.com/darkmatter/nap/prod_gf_cn/item_icon_u66fwb/89775100b52a0452cfd4f643d7f4769b.png",
+          "hollow_icon_path": "https://act-webstatic.mihoyo.com/darkmatter/nap/prod_gf_cn/item_icon_u66fwb/10e0372708bfaba83fe384c0aeddf216.png",
+          "rank": 1,
+          "is_chosen": true,
+          "role_square_url": "https://act-webstatic.mihoyo.com/game_record/zzzv2/role_square_avatar/role_square_avatar_1191_3111911.png",
+          "sub_element_type": 0
+        },
+        {
+          "id": 1241,
+          "level": 60,
+          "name_mi18n": "朱鸢",
+          "full_name_mi18n": "朱鸢",
+          "element_type": 205,
+          "camp_name_mi18n": "刑侦特勤组",
+          "avatar_profession": 1,
+          "rarity": "S",
+          "group_icon_path": "https://act-webstatic.mihoyo.com/darkmatter/nap/prod_gf_cn/item_icon_u66fwb/033f6219c3e923be69fe41d80818eb8c.png",
+          "hollow_icon_path": "https://act-webstatic.mihoyo.com/darkmatter/nap/prod_gf_cn/item_icon_u66fwb/79eefcc30a3fd68501e931fb57cbceda.png",
+          "rank": 1,
+          "is_chosen": true,
+          "role_square_url": "https://act-webstatic.mihoyo.com/game_record/zzzv2/role_square_avatar/role_square_avatar_1241.png",
+          "sub_element_type": 0
+        }
+      ],
+      "uid": "10****38",
+      "nickname": "暮晓",
+      "region": "prod_gf_cn"
+    }
+  }
+]
+
+```
+
+</details>
+<details>
+<summary>character_info方法返回</summary>
+
+```json
+{
+  "retcode": 0,
+  "message": "OK",
+  "data": {
+    "avatar_list": [
+      {
+        "id": 1191,
+        "level": 60,
+        "name_mi18n": "艾莲",
+        "full_name_mi18n": "艾莲·乔",
+        "element_type": 202,
+        "camp_name_mi18n": "维多利亚家政",
+        "avatar_profession": 1,
+        "rarity": "S",
+        "group_icon_path": "https://act-webstatic.mihoyo.com/darkmatter/nap/prod_gf_cn/item_icon_u66fwb/89775100b52a0452cfd4f643d7f4769b.png",
+        "hollow_icon_path": "https://act-webstatic.mihoyo.com/darkmatter/nap/prod_gf_cn/item_icon_u66fwb/10e0372708bfaba83fe384c0aeddf216.png",
+        "equip": [
+          {
+            "id": 31041,
+            "level": 15,
+            "name": "啄木鸟电音[1]",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/nap/prod_gf_cn/item_icon_u66fwb/8bbee5b6e4cf2cc1b4d8b72a88db0100.png",
+            "rarity": "S",
+            "properties": [
+              {
+                "property_name": "攻击力",
+                "property_id": 12103,
+                "base": "38",
+                "level": 2,
+                "valid": false,
+                "system_id": 121,
+                "add": 1
+              },
+              {
+                "property_name": "防御力",
+                "property_id": 13103,
+                "base": "30",
+                "level": 2,
+                "valid": false,
+                "system_id": 131,
+                "add": 1
+              },
+              {
+                "property_name": "暴击率",
+                "property_id": 20103,
+                "base": "2.4%",
+                "level": 1,
+                "valid": true,
+                "system_id": 201,
+                "add": 0
+              },
+              {
+                "property_name": "穿透值",
+                "property_id": 23203,
+                "base": "27",
+                "level": 3,
+                "valid": true,
+                "system_id": 232,
+                "add": 2
+              }
+            ],
+            "main_properties": [
+              {
+                "property_name": "生命值",
+                "property_id": 11103,
+                "base": "2200",
+                "level": 1,
+                "valid": false,
+                "system_id": 111,
+                "add": 0
+              }
+            ],
+            "equip_suit": {
+              "suit_id": 31000,
+              "name": "啄木鸟电音",
+              "own": 2,
+              "desc1": "暴击率+8%。",
+              "desc2": "\u003ccolor=#FFFFFF\u003e[普通攻击]\u003c/color\u003e、\u003ccolor=#FFFFFF\u003e[闪避反击]\u003c/color\u003e或\u003ccolor=#FFFFFF\u003e[强化特殊技]\u003c/color\u003e命中敌人并触发暴击时，分别为装备者提供1层增益效果，每层增益效果使装备者的攻击力提升9%，持续6秒，不同招式分别结算持续时间。"
+            },
+            "equipment_type": 1,
+            "invalid_property_cnt": 2,
+            "all_hit": false
+          },
+          {
+            "id": 32542,
+            "level": 15,
+            "name": "极地重金属[2]",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/nap/prod_gf_cn/item_icon_u66fwb/9283a24df999b5a363bc72e05a6bb199.png",
+            "rarity": "S",
+            "properties": [
+              {
+                "property_name": "穿透值",
+                "property_id": 23203,
+                "base": "27",
+                "level": 3,
+                "valid": true,
+                "system_id": 232,
+                "add": 2
+              },
+              {
+                "property_name": "暴击率",
+                "property_id": 20103,
+                "base": "4.8%",
+                "level": 2,
+                "valid": true,
+                "system_id": 201,
+                "add": 1
+              },
+              {
+                "property_name": "攻击力",
+                "property_id": 12102,
+                "base": "3%",
+                "level": 1,
+                "valid": true,
+                "system_id": 121,
+                "add": 0
+              },
+              {
+                "property_name": "暴击伤害",
+                "property_id": 21103,
+                "base": "9.6%",
+                "level": 2,
+                "valid": true,
+                "system_id": 211,
+                "add": 1
+              }
+            ],
+            "main_properties": [
+              {
+                "property_name": "攻击力",
+                "property_id": 12103,
+                "base": "316",
+                "level": 1,
+                "valid": false,
+                "system_id": 121,
+                "add": 0
+              }
+            ],
+            "equip_suit": {
+              "suit_id": 32500,
+              "name": "极地重金属",
+              "own": 4,
+              "desc1": "\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e+10%。",
+              "desc2": "\u003ccolor=#FFFFFF\u003e[普通攻击]\u003c/color\u003e和\u003ccolor=#FFFFFF\u003e[冲刺攻击]\u003c/color\u003e造成的伤害提升20%，队伍中任意角色对敌人施加\u003ccolor=#98EFF0\u003e[冻结]\u003c/color\u003e或触发\u003ccolor=#98EFF0\u003e[碎冰]\u003c/color\u003e效果时，该增益效果额外提升20%，持续12秒。"
+            },
+            "equipment_type": 2,
+            "invalid_property_cnt": 0,
+            "all_hit": true
+          },
+          {
+            "id": 32543,
+            "level": 15,
+            "name": "极地重金属[3]",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/nap/prod_gf_cn/item_icon_u66fwb/9283a24df999b5a363bc72e05a6bb199.png",
+            "rarity": "S",
+            "properties": [
+              {
+                "property_name": "生命值",
+                "property_id": 11102,
+                "base": "3%",
+                "level": 1,
+                "valid": false,
+                "system_id": 111,
+                "add": 0
+              },
+              {
+                "property_name": "攻击力",
+                "property_id": 12103,
+                "base": "57",
+                "level": 3,
+                "valid": false,
+                "system_id": 121,
+                "add": 2
+              },
+              {
+                "property_name": "暴击伤害",
+                "property_id": 21103,
+                "base": "14.4%",
+                "level": 3,
+                "valid": true,
+                "system_id": 211,
+                "add": 2
+              },
+              {
+                "property_name": "攻击力",
+                "property_id": 12102,
+                "base": "3%",
+                "level": 1,
+                "valid": true,
+                "system_id": 121,
+                "add": 0
+              }
+            ],
+            "main_properties": [
+              {
+                "property_name": "防御力",
+                "property_id": 13103,
+                "base": "184",
+                "level": 1,
+                "valid": false,
+                "system_id": 131,
+                "add": 0
+              }
+            ],
+            "equip_suit": {
+              "suit_id": 32500,
+              "name": "极地重金属",
+              "own": 4,
+              "desc1": "\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e+10%。",
+              "desc2": "\u003ccolor=#FFFFFF\u003e[普通攻击]\u003c/color\u003e和\u003ccolor=#FFFFFF\u003e[冲刺攻击]\u003c/color\u003e造成的伤害提升20%，队伍中任意角色对敌人施加\u003ccolor=#98EFF0\u003e[冻结]\u003c/color\u003e或触发\u003ccolor=#98EFF0\u003e[碎冰]\u003c/color\u003e效果时，该增益效果额外提升20%，持续12秒。"
+            },
+            "equipment_type": 3,
+            "invalid_property_cnt": 2,
+            "all_hit": false
+          },
+          {
+            "id": 32544,
+            "level": 15,
+            "name": "极地重金属[4]",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/nap/prod_gf_cn/item_icon_u66fwb/9283a24df999b5a363bc72e05a6bb199.png",
+            "rarity": "S",
+            "properties": [
+              {
+                "property_name": "穿透值",
+                "property_id": 23203,
+                "base": "18",
+                "level": 2,
+                "valid": true,
+                "system_id": 232,
+                "add": 1
+              },
+              {
+                "property_name": "攻击力",
+                "property_id": 12103,
+                "base": "38",
+                "level": 2,
+                "valid": false,
+                "system_id": 121,
+                "add": 1
+              },
+              {
+                "property_name": "生命值",
+                "property_id": 11102,
+                "base": "3%",
+                "level": 1,
+                "valid": false,
+                "system_id": 111,
+                "add": 0
+              },
+              {
+                "property_name": "异常精通",
+                "property_id": 31203,
+                "base": "27",
+                "level": 3,
+                "valid": false,
+                "system_id": 312,
+                "add": 2
+              }
+            ],
+            "main_properties": [
+              {
+                "property_name": "暴击伤害",
+                "property_id": 21103,
+                "base": "48%",
+                "level": 1,
+                "valid": false,
+                "system_id": 211,
+                "add": 0
+              }
+            ],
+            "equip_suit": {
+              "suit_id": 32500,
+              "name": "极地重金属",
+              "own": 4,
+              "desc1": "\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e+10%。",
+              "desc2": "\u003ccolor=#FFFFFF\u003e[普通攻击]\u003c/color\u003e和\u003ccolor=#FFFFFF\u003e[冲刺攻击]\u003c/color\u003e造成的伤害提升20%，队伍中任意角色对敌人施加\u003ccolor=#98EFF0\u003e[冻结]\u003c/color\u003e或触发\u003ccolor=#98EFF0\u003e[碎冰]\u003c/color\u003e效果时，该增益效果额外提升20%，持续12秒。"
+            },
+            "equipment_type": 4,
+            "invalid_property_cnt": 3,
+            "all_hit": false
+          },
+          {
+            "id": 32545,
+            "level": 15,
+            "name": "极地重金属[5]",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/nap/prod_gf_cn/item_icon_u66fwb/9283a24df999b5a363bc72e05a6bb199.png",
+            "rarity": "S",
+            "properties": [
+              {
+                "property_name": "防御力",
+                "property_id": 13103,
+                "base": "15",
+                "level": 1,
+                "valid": false,
+                "system_id": 131,
+                "add": 0
+              },
+              {
+                "property_name": "穿透值",
+                "property_id": 23203,
+                "base": "27",
+                "level": 3,
+                "valid": true,
+                "system_id": 232,
+                "add": 2
+              },
+              {
+                "property_name": "攻击力",
+                "property_id": 12102,
+                "base": "6%",
+                "level": 2,
+                "valid": true,
+                "system_id": 121,
+                "add": 1
+              },
+              {
+                "property_name": "攻击力",
+                "property_id": 12103,
+                "base": "38",
+                "level": 2,
+                "valid": false,
+                "system_id": 121,
+                "add": 1
+              }
+            ],
+            "main_properties": [
+              {
+                "property_name": "穿透率",
+                "property_id": 23103,
+                "base": "24%",
+                "level": 1,
+                "valid": false,
+                "system_id": 231,
+                "add": 0
+              }
+            ],
+            "equip_suit": {
+              "suit_id": 32500,
+              "name": "极地重金属",
+              "own": 4,
+              "desc1": "\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e+10%。",
+              "desc2": "\u003ccolor=#FFFFFF\u003e[普通攻击]\u003c/color\u003e和\u003ccolor=#FFFFFF\u003e[冲刺攻击]\u003c/color\u003e造成的伤害提升20%，队伍中任意角色对敌人施加\u003ccolor=#98EFF0\u003e[冻结]\u003c/color\u003e或触发\u003ccolor=#98EFF0\u003e[碎冰]\u003c/color\u003e效果时，该增益效果额外提升20%，持续12秒。"
+            },
+            "equipment_type": 5,
+            "invalid_property_cnt": 1,
+            "all_hit": false
+          },
+          {
+            "id": 31046,
+            "level": 15,
+            "name": "啄木鸟电音[6]",
+            "icon": "https://act-webstatic.mihoyo.com/darkmatter/nap/prod_gf_cn/item_icon_u66fwb/8bbee5b6e4cf2cc1b4d8b72a88db0100.png",
+            "rarity": "S",
+            "properties": [
+              {
+                "property_name": "攻击力",
+                "property_id": 12103,
+                "base": "38",
+                "level": 2,
+                "valid": false,
+                "system_id": 121,
+                "add": 1
+              },
+              {
+                "property_name": "防御力",
+                "property_id": 13103,
+                "base": "45",
+                "level": 3,
+                "valid": false,
+                "system_id": 131,
+                "add": 2
+              },
+              {
+                "property_name": "暴击率",
+                "property_id": 20103,
+                "base": "7.2%",
+                "level": 3,
+                "valid": true,
+                "system_id": 201,
+                "add": 2
+              },
+              {
+                "property_name": "生命值",
+                "property_id": 11102,
+                "base": "3%",
+                "level": 1,
+                "valid": false,
+                "system_id": 111,
+                "add": 0
+              }
+            ],
+            "main_properties": [
+              {
+                "property_name": "攻击力",
+                "property_id": 12102,
+                "base": "30%",
+                "level": 1,
+                "valid": false,
+                "system_id": 121,
+                "add": 0
+              }
+            ],
+            "equip_suit": {
+              "suit_id": 31000,
+              "name": "啄木鸟电音",
+              "own": 2,
+              "desc1": "暴击率+8%。",
+              "desc2": "\u003ccolor=#FFFFFF\u003e[普通攻击]\u003c/color\u003e、\u003ccolor=#FFFFFF\u003e[闪避反击]\u003c/color\u003e或\u003ccolor=#FFFFFF\u003e[强化特殊技]\u003c/color\u003e命中敌人并触发暴击时，分别为装备者提供1层增益效果，每层增益效果使装备者的攻击力提升9%，持续6秒，不同招式分别结算持续时间。"
+            },
+            "equipment_type": 6,
+            "invalid_property_cnt": 3,
+            "all_hit": false
+          }
+        ],
+        "weapon": {
+          "id": 14119,
+          "level": 60,
+          "name": "深海访客",
+          "star": 1,
+          "icon": "https://act-webstatic.mihoyo.com/darkmatter/nap/prod_gf_cn/item_icon_u66fwb/85ebb793d542452c7a4359b5638d64ec.png",
+          "rarity": "S",
+          "properties": [
+            {
+              "property_name": "暴击率",
+              "property_id": 20103,
+              "base": "24%",
+              "level": 0,
+              "valid": false,
+              "system_id": 0,
+              "add": 0
+            }
+          ],
+          "main_properties": [
+            {
+              "property_name": "基础攻击力",
+              "property_id": 12101,
+              "base": "713",
+              "level": 0,
+              "valid": false,
+              "system_id": 0,
+              "add": 0
+            }
+          ],
+          "talent_title": "诸洋之王",
+          "talent_content": "\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e提升\u003ccolor=#2BAD00\u003e25%\u003c/color\u003e；\u003ccolor=#FFFFFF\u003e[普通攻击]\u003c/color\u003e命中敌人时，装备者的暴击率提升\u003ccolor=#2BAD00\u003e10%\u003c/color\u003e，持续8秒；\u003ccolor=#FFFFFF\u003e[冲刺攻击]\u003c/color\u003e造成\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e时，装备者的暴击率额外提升\u003ccolor=#2BAD00\u003e10%\u003c/color\u003e，持续15秒，每种增益效果单独结算持续时间。",
+          "profession": 1
+        },
+        "properties": [
+          {
+            "property_name": "生命值",
+            "property_id": 1,
+            "base": "7673",
+            "add": "2891",
+            "final": "10564"
+          },
+          {
+            "property_name": "攻击力",
+            "property_id": 2,
+            "base": "1651",
+            "add": "1218",
+            "final": "2869"
+          },
+          {
+            "property_name": "防御力",
+            "property_id": 3,
+            "base": "606",
+            "add": "274",
+            "final": "880"
+          },
+          {
+            "property_name": "冲击力",
+            "property_id": 4,
+            "base": "",
+            "add": "",
+            "final": "93"
+          },
+          {
+            "property_name": "暴击率",
+            "property_id": 5,
+            "base": "",
+            "add": "",
+            "final": "65.8%"
+          },
+          {
+            "property_name": "暴击伤害",
+            "property_id": 6,
+            "base": "",
+            "add": "",
+            "final": "122.0%"
+          },
+          {
+            "property_name": "异常掌控",
+            "property_id": 7,
+            "base": "",
+            "add": "",
+            "final": "94"
+          },
+          {
+            "property_name": "异常精通",
+            "property_id": 8,
+            "base": "",
+            "add": "",
+            "final": "120"
+          },
+          {
+            "property_name": "穿透率",
+            "property_id": 9,
+            "base": "",
+            "add": "",
+            "final": "24.0%"
+          },
+          {
+            "property_name": "能量自动回复",
+            "property_id": 11,
+            "base": "",
+            "add": "",
+            "final": "1.20"
+          },
+          {
+            "property_name": "穿透值",
+            "property_id": 232,
+            "base": "",
+            "add": "",
+            "final": "99"
+          },
+          {
+            "property_name": "冰属性伤害加成",
+            "property_id": 317,
+            "base": "",
+            "add": "",
+            "final": "10.0%"
+          }
+        ],
+        "skills": [
+          {
+            "level": 11,
+            "skill_type": 0,
+            "items": [
+              {
+                "title": "普通攻击：利齿修剪法",
+                "text": "点按 \u003cIconMap:Icon_Normal\u003e 发动：\\n向前方进行至多三段的攻击，造成\u003ccolor=#F0D12B\u003e物理伤害\u003c/color\u003e；\\n第三段攻击期间，连点或长按 \u003cIconMap:Icon_Normal\u003e 可以延长招式的持续时间。"
+              },
+              {
+                "title": "普通攻击：急冻修剪法",
+                "text": "激活\u003ccolor=#FFFFFF\u003e[急冻]\u003c/color\u003e效果后，点按 \u003cIconMap:Icon_Normal\u003e 发动：\\n向前方进行至多三段的攻击，造成\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e；\\n每段攻击消耗1点\u003ccolor=#FFFFFF\u003e[急冻充能]\u003c/color\u003e；\\n第三段攻击期间，连点或长按 \u003cIconMap:Icon_Normal\u003e 可以延长招式的持续时间。"
+              }
+            ]
+          },
+          {
+            "level": 11,
+            "skill_type": 1,
+            "items": [
+              {
+                "title": "特殊技：摆尾",
+                "text": "点按 \u003cIconMap:Icon_Special\u003e 发动：\\n向前方进行快速甩尾攻击，造成\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e；\\n招式发动期间抗打断等级提升。"
+              },
+              {
+                "title": "强化特殊技：横扫",
+                "text": "能量足够时，点按 \u003cIconMap:Icon_SpecialReady\u003e 发动：\\n向前方进行强力甩尾攻击，造成大量\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e；\\n命中敌人时，获得1点\u003ccolor=#FFFFFF\u003e[急冻充能]\u003c/color\u003e；\\n招式发动期间拥有无敌效果；\\n招式发动后，可直接衔接第三段\u003ccolor=#FFFFFF\u003e[普通攻击]\u003c/color\u003e。"
+              },
+              {
+                "title": "强化特殊技：鲨卷风",
+                "text": "\u003ccolor=#FFFFFF\u003e[强化特殊技：横扫]\u003c/color\u003e发动后，能量足够时，点按 \u003cIconMap:Icon_SpecialReady\u003e 发动：\\n向前方进行强力连续斩击，造成大量\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e；\\n命中敌人时，获得1点\u003ccolor=#FFFFFF\u003e[急冻充能]\u003c/color\u003e；\\n招式发动期间拥有无敌效果；\\n招式发动后，可直接衔接第三段\u003ccolor=#FFFFFF\u003e[普通攻击]\u003c/color\u003e。"
+              }
+            ]
+          },
+          {
+            "level": 10,
+            "skill_type": 2,
+            "items": [
+              {
+                "title": "闪避：涡漩",
+                "text": "点按 \u003cIconMap:Icon_Evade\u003e 发动：\\n快速的冲刺闪避；\\n招式发动期间拥有无敌效果；\\n触发\u003ccolor=#FFFFFF\u003e[极限闪避]\u003c/color\u003e时，艾莲将获得\u003ccolor=#FFFFFF\u003e[快蓄]\u003c/color\u003e效果，缩短\u003ccolor=#FFFFFF\u003e[冲刺攻击：冰渊潜袭]\u003c/color\u003e的蓄力时间，最多持续5秒或触发一次。"
+              },
+              {
+                "title": "冲刺：狩猎巡游",
+                "text": "长按或双击 \u003cIconMap:Icon_Evade\u003e 发动：\\n进入\u003ccolor=#FFFFFF\u003e[巡游]\u003c/color\u003e状态，快速冲刺移动；\\n在\u003ccolor=#FFFFFF\u003e[巡游]\u003c/color\u003e状态下使用{LAYOUT_CONSOLECONTROLLER#操作杆}{LAYOUT_FALLBACK#摇杆}控制方向，松开{LAYOUT_CONSOLECONTROLLER#操作杆}{LAYOUT_FALLBACK#摇杆}则会停下；\\n招式发动瞬间拥有短暂的无敌效果。"
+              },
+              {
+                "title": "冲刺攻击：冰渊潜袭",
+                "text": "在\u003ccolor=#FFFFFF\u003e[巡游]\u003c/color\u003e状态下，点按 \u003cIconMap:Icon_Normal\u003e 发动：\\n对敌人进行回旋斩击，随后拉开剪刀，发动快速剪击，造成\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e；\\n快速剪击命中时，获得1点\u003ccolor=#FFFFFF\u003e[急冻充能]\u003c/color\u003e。\\n\\n在\u003ccolor=#FFFFFF\u003e[巡游]\u003c/color\u003e状态下，长按 \u003cIconMap:Icon_Normal\u003e 发动：\\n对敌人进行回旋斩击，随后拉开剪刀，发动蓄力剪击，造成大量\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e；\\n蓄力剪击命中时，获得3点\u003ccolor=#FFFFFF\u003e[急冻充能]\u003c/color\u003e，若敌人处于\u003ccolor=#98EFF0\u003e[冻结]\u003c/color\u003e状态下，则必定触发\u003ccolor=#98EFF0\u003e[碎冰]\u003c/color\u003e效果；\\n招式蓄力期间抗打断等级提升，受到的伤害降低40%；\\n招式发动期间拥有无敌效果。"
+              },
+              {
+                "title": "急冻",
+                "text": "拥有\u003ccolor=#FFFFFF\u003e[急冻充能]\u003c/color\u003e时，将激活\u003ccolor=#FFFFFF\u003e[急冻]\u003c/color\u003e效果；激活\u003ccolor=#FFFFFF\u003e[急冻]\u003c/color\u003e效果后，\u003ccolor=#FFFFFF\u003e[普通攻击]\u003c/color\u003e和\u003ccolor=#FFFFFF\u003e[冲刺攻击]\u003c/color\u003e将消耗\u003ccolor=#FFFFFF\u003e[急冻充能]\u003c/color\u003e，造成大量\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e；艾莲最多可以拥有6点\u003ccolor=#FFFFFF\u003e[急冻充能]\u003c/color\u003e。"
+              },
+              {
+                "title": "冲刺攻击：骇浪",
+                "text": "闪避时，点按 \u003cIconMap:Icon_Normal\u003e 发动：\\n向前方进行突进斩击，造成\u003ccolor=#F0D12B\u003e物理伤害\u003c/color\u003e；"
+              },
+              {
+                "title": "冲刺攻击：寒潮",
+                "text": "激活\u003ccolor=#FFFFFF\u003e[急冻]\u003c/color\u003e效果后，闪避时，点按 \u003cIconMap:Icon_Normal\u003e 发动：\\n向前方进行突进斩击，造成\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e；\\n消耗1点\u003ccolor=#FFFFFF\u003e[急冻充能]\u003c/color\u003e。"
+              },
+              {
+                "title": "闪避反击：暗礁",
+                "text": "触发\u003ccolor=#FFFFFF\u003e[极限闪避]\u003c/color\u003e后，点按 \u003cIconMap:Icon_Normal\u003e 发动：\\n快速穿过敌人，拉开剪刀进行剪击，造成\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e；\\n招式发动期间拥有无敌效果。"
+              }
+            ]
+          },
+          {
+            "level": 11,
+            "skill_type": 3,
+            "items": [
+              {
+                "title": "连携技：雪崩",
+                "text": "触发\u003ccolor=#FFFFFF\u003e[连携技]\u003c/color\u003e时，选择对应角色发动：\\n从空中下砸并生成一阵冰风暴，造成大量\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e；\\n招式发动期间拥有无敌效果。"
+              },
+              {
+                "title": "终结技：永冬狂宴",
+                "text": "喧响等级达到\u003ccolor=#FFFFFF\u003e[极]\u003c/color\u003e时，点按 \u003cIconMap:Icon_UltimateReady\u003e 发动：\\n从空中下砸并生成一阵冰风暴，随后使用剪刀进行强力一击，造成大量\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e；\\n招式发动期间拥有无敌效果。"
+              }
+            ]
+          },
+          {
+            "level": 7,
+            "skill_type": 5,
+            "items": [
+              {
+                "title": "核心被动：凌牙厉齿",
+                "text": "艾莲在\u003ccolor=#FFFFFF\u003e[冲刺攻击：冰渊潜袭]\u003c/color\u003e中发动蓄力剪击，或消耗\u003ccolor=#FFFFFF\u003e[急冻充能]\u003c/color\u003e发动\u003ccolor=#FFFFFF\u003e[普通攻击：急冻修剪法]\u003c/color\u003e时，招式的暴击伤害提升\u003ccolor=#2BAD00\u003e100%\u003c/color\u003e。"
+              },
+              {
+                "title": "额外能力：风暴潮",
+                "text": "队伍中存在与自身属性或阵营相同的角色时触发：\\n艾莲造成\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e时，后继\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e提升3%，持续10秒，最多叠加10层，重复触发时刷新持续时间。"
+              }
+            ]
+          },
+          {
+            "level": 10,
+            "skill_type": 6,
+            "items": [
+              {
+                "title": "快速支援：护卫鲛",
+                "text": "当前操作中的角色被击飞时，点按 \u003cIconMap:Icon_Switch\u003e 发动：\\n快速穿过敌人，拉开剪刀进行剪击，造成\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e；\\n招式发动期间拥有无敌效果。\\n当前操作中的角色被击飞时，拖曳{LAYOUT_CONSOLECONTROLLER#操作杆}{LAYOUT_FALLBACK#摇杆}，点按 \u003cIconMap:Icon_Switch\u003e 发动：\\n进入\u003ccolor=#FFFFFF\u003e[巡游]\u003c/color\u003e状态，快速冲刺移动；\\n在\u003ccolor=#FFFFFF\u003e[巡游]\u003c/color\u003e状态下使用{LAYOUT_CONSOLECONTROLLER#操作杆}{LAYOUT_FALLBACK#摇杆}控制方向，松开{LAYOUT_CONSOLECONTROLLER#操作杆}{LAYOUT_FALLBACK#摇杆}则会停下；\\n招式发动瞬间拥有短暂的无敌效果。\\n发动\u003ccolor=#FFFFFF\u003e[快速支援]\u003c/color\u003e时，艾莲将获得\u003ccolor=#FFFFFF\u003e[快蓄]\u003c/color\u003e效果，缩短\u003ccolor=#FFFFFF\u003e[冲刺攻击：冰渊潜袭]\u003c/color\u003e的蓄力时间，最多持续5秒或触发一次。"
+              },
+              {
+                "title": "招架支援：迎头浪",
+                "text": "前场角色即将被攻击时，点按 \u003cIconMap:Icon_Switch\u003e 发动：\\n招架敌人的攻击，累积大量失衡值；\\n招式发动期间拥有无敌效果。"
+              },
+              {
+                "title": "支援突击：巡洋鲨",
+                "text": "发动\u003ccolor=#FFFFFF\u003e[招架支援]\u003c/color\u003e后，点按 \u003cIconMap:Icon_Normal\u003e 发动：\\n对前方敌人发动突进斩击，造成\u003ccolor=#98EFF0\u003e冰属性伤害\u003c/color\u003e；\\n招式攻击期间，连点或长按 \u003cIconMap:Icon_Normal\u003e 可以延长招式的持续时间；\\n招式发动期间拥有无敌效果。"
+              }
+            ]
+          }
+        ],
+        "rank": 1,
+        "ranks": [
+          {
+            "id": 1,
+            "name": "凛冬前兆",
+            "desc": "在\u003ccolor=#FFFFFF\u003e[冲刺攻击：冰渊潜袭]\u003c/color\u003e中发动快速剪击命中敌人时，获得的\u003ccolor=#FFFFFF\u003e[急冻充能]\u003c/color\u003e提升至3点；\\n在\u003ccolor=#FFFFFF\u003e[冲刺攻击：冰渊潜袭]\u003c/color\u003e中发动蓄力剪击命中敌人时，获得的\u003ccolor=#FFFFFF\u003e[急冻充能]\u003c/color\u003e提升至6点；\\n每消耗1点\u003ccolor=#FFFFFF\u003e[急冻充能]\u003c/color\u003e，艾莲的暴击率提升2%，持续15秒，\\n最多叠加6层，每层效果单独结算持续时间。",
+            "pos": 1,
+            "is_unlocked": true
+          },
+          {
+            "id": 2,
+            "name": "冰洋掠食者",
+            "desc": "发动第三段\u003ccolor=#FFFFFF\u003e[普通攻击：急冻修剪法]\u003c/color\u003e后，可以直接衔接发动\u003ccolor=#FFFFFF\u003e[强化特殊技：鲨卷风]\u003c/color\u003e；\\n发动\u003ccolor=#FFFFFF\u003e[强化特殊技]\u003c/color\u003e时，每拥有1点\u003ccolor=#FFFFFF\u003e[急冻充能]\u003c/color\u003e，\\n当前招式造成的暴击伤害提升20%，最多提升60%。",
+            "pos": 2,
+            "is_unlocked": false
+          },
+          {
+            "id": 3,
+            "name": "永不加班",
+            "desc": "\u003ccolor=#FFFFFF\u003e[普通攻击]\u003c/color\u003e、\u003ccolor=#FFFFFF\u003e[闪避]\u003c/color\u003e、\u003ccolor=#FFFFFF\u003e[支援技]\u003c/color\u003e、\u003ccolor=#FFFFFF\u003e[特殊技]\u003c/color\u003e、\u003ccolor=#FFFFFF\u003e[连携技]\u003c/color\u003e 技能等级+2",
+            "pos": 3,
+            "is_unlocked": false
+          },
+          {
+            "id": 4,
+            "name": "无休寒潮",
+            "desc": "队伍中任意角色对敌人施加\u003ccolor=#98EFF0\u003e[冻结]\u003c/color\u003e效果或使敌人失衡时，\\n自身获得6点\u003ccolor=#FFFFFF\u003e[急冻充能]\u003c/color\u003e和\u003ccolor=#FFFFFF\u003e[快蓄]\u003c/color\u003e效果，并回复4点能量，能量回复效果10秒内最多触发一次。",
+            "pos": 4,
+            "is_unlocked": false
+          },
+          {
+            "id": 5,
+            "name": "睡眠充足",
+            "desc": "\u003ccolor=#FFFFFF\u003e[普通攻击]\u003c/color\u003e、\u003ccolor=#FFFFFF\u003e[闪避]\u003c/color\u003e、\u003ccolor=#FFFFFF\u003e[支援技]\u003c/color\u003e、\u003ccolor=#FFFFFF\u003e[特殊技]\u003c/color\u003e、\u003ccolor=#FFFFFF\u003e[连携技]\u003c/color\u003e 技能等级+2",
+            "pos": 5,
+            "is_unlocked": false
+          },
+          {
+            "id": 6,
+            "name": "盛宴时分",
+            "desc": "发动\u003ccolor=#FFFFFF\u003e[强化特殊技]\u003c/color\u003e、\u003ccolor=#FFFFFF\u003e[连携技]\u003c/color\u003e或获得\u003ccolor=#FFFFFF\u003e[快蓄]\u003c/color\u003e时，\\n艾莲的穿透率提升20%，持续6秒，同时获得1层\u003ccolor=#FFFFFF\u003e[盛宴]\u003c/color\u003e，\u003ccolor=#FFFFFF\u003e[盛宴]\u003c/color\u003e最多叠加3层；\\n拥有3层\u003ccolor=#FFFFFF\u003e[盛宴]\u003c/color\u003e后，在\u003ccolor=#FFFFFF\u003e[冲刺攻击：冰渊潜袭]\u003c/color\u003e中发动蓄力剪击命中敌人时，\\n消耗所有\u003ccolor=#FFFFFF\u003e[盛宴]\u003c/color\u003e，使当前招式造成的伤害提升250%。",
+            "pos": 6,
+            "is_unlocked": false
+          }
+        ],
+        "role_vertical_painting_url": "https://act-webstatic.mihoyo.com/game_record/zzzv2/role_vertical_painting/role_vertical_painting_1191_3111911.png",
+        "equip_plan_info": {
+          "type": 2,
+          "game_default": {
+            "property_list": [
+              {
+                "id": 5,
+                "name": "暴击率",
+                "full_name": "暴击率",
+                "system_id": 5,
+                "is_select": false
+              },
+              {
+                "id": 6,
+                "name": "暴击伤害",
+                "full_name": "暴击伤害",
+                "system_id": 6,
+                "is_select": false
+              }
+            ]
+          },
+          "cultivate_info": {
+            "name": "【0+1】【艾莲】直伤双爆流",
+            "plan_id": "129",
+            "is_delete": false,
+            "old_plan": false
+          },
+          "custom_info": {
+            "property_list": [
+              {
+                "id": 11103,
+                "name": "生命值",
+                "full_name": "生命值",
+                "system_id": 111,
+                "is_select": false
+              },
+              {
+                "id": 11102,
+                "name": "生命值",
+                "full_name": "生命值百分比",
+                "system_id": 111,
+                "is_select": false
+              },
+              {
+                "id": 12103,
+                "name": "攻击力",
+                "full_name": "攻击力",
+                "system_id": 121,
+                "is_select": false
+              },
+              {
+                "id": 12102,
+                "name": "攻击力",
+                "full_name": "攻击力百分比",
+                "system_id": 121,
+                "is_select": false
+              },
+              {
+                "id": 13103,
+                "name": "防御力",
+                "full_name": "防御力",
+                "system_id": 131,
+                "is_select": false
+              },
+              {
+                "id": 13102,
+                "name": "防御力",
+                "full_name": "防御力百分比",
+                "system_id": 131,
+                "is_select": false
+              },
+              {
+                "id": 20103,
+                "name": "暴击率",
+                "full_name": "暴击率",
+                "system_id": 201,
+                "is_select": false
+              },
+              {
+                "id": 21103,
+                "name": "暴击伤害",
+                "full_name": "暴击伤害",
+                "system_id": 211,
+                "is_select": false
+              },
+              {
+                "id": 31203,
+                "name": "异常精通",
+                "full_name": "异常精通",
+                "system_id": 312,
+                "is_select": false
+              },
+              {
+                "id": 23203,
+                "name": "穿透值",
+                "full_name": "穿透值",
+                "system_id": 232,
+                "is_select": false
+              }
+            ]
+          },
+          "valid_property_cnt": 26,
+          "plan_only_special_property": false
+        },
+        "us_full_name": "Ellen Joe",
+        "vertical_painting_color": "#c9becc",
+        "sub_element_type": 0,
+        "skin_list": [
+          {
+            "skin_id": 3111911,
+            "skin_name": "艾莲·从周一到周五",
+            "skin_vertical_painting_url": "https://act-webstatic.mihoyo.com/game_record/zzzv2/role_vertical_painting/role_vertical_painting_1191_3111911.png",
+            "skin_square_url": "https://act-webstatic.mihoyo.com/game_record/zzzv2/role_square_avatar/role_square_avatar_1191_3111911.png",
+            "skin_hollow_icon_path": "https://act-webstatic.mihoyo.com/darkmatter/nap/prod_gf_cn/item_icon_u66fwb/10e0372708bfaba83fe384c0aeddf216.png",
+            "skin_vertical_painting_color": "#c9becc",
+            "unlocked": true,
+            "rarity": "S",
+            "is_original": false
+          },
+          {
+            "skin_id": 3111910,
+            "skin_name": "艾莲·剪刀手艾鲨鲨",
+            "skin_vertical_painting_url": "https://act-webstatic.mihoyo.com/game_record/zzzv2/role_vertical_painting/role_vertical_painting_1191.png",
+            "skin_square_url": "https://act-webstatic.mihoyo.com/game_record/zzzv2/role_square_avatar/role_square_avatar_1191.png",
+            "skin_hollow_icon_path": "https://act-webstatic.mihoyo.com/darkmatter/nap/prod_gf_cn/item_icon_u66fwb/caa79add6658fbe1a813e937ab109a03.png",
+            "skin_vertical_painting_color": "#c9becc",
+            "unlocked": true,
+            "rarity": "S",
+            "is_original": true
+          }
+        ]
+      }
+    ],
+    "equip_wiki": {},
+    "weapon_wiki": {},
+    "avatar_wiki": {},
+    "strategy_wiki": {},
+    "cultivate_index": {
+      "1191": "https://act.mihoyo.com/zzz/event/character-builder/index.html?game_biz=nap_cn\u0026mhy_auth_required=1\u0026mhy_presentation_style=fullscreen\u0026utm_source=bbs\u0026utm_medium=zzz\u0026utm_campaign=zj-char#/?avatar_id=1191"
+    },
+    "cultivate_equip": {
+      "1191": "https://act.mihoyo.com/zzz/event/character-builder/index.html?game_biz=nap_cn\u0026mhy_auth_required=1\u0026mhy_presentation_style=fullscreen\u0026utm_source=bbs\u0026utm_medium=zzz\u0026utm_campaign=zj-drive#/?avatar_id=1191"
+    }
+  }
+}
+
+```
+
+</details>
 
 ### 带有_analysed方法（分析后）的返回
+
+- X character_info的分析（懒+还不会用图片）
 
 <details>
 <summary>day_analysed方法返回</summary>
