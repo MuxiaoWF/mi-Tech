@@ -85,7 +85,9 @@ public class get_stoken_qrcode {
     }
     private static String[] checkLogin(String appId, String ticket, String device, StatusNotifier notifier) {
         try {
+            int times = 0;
             while (true) {
+                times++;
                 Map<String, Object> body = new HashMap<>() {{
                     put("app_id", appId);
                     put("ticket", ticket);
@@ -102,10 +104,10 @@ public class get_stoken_qrcode {
                 String stat = data.get("stat").getAsString();
                 switch (stat) {
                     case "Init":
-                        notifier.notifyListeners("等待扫码");
+                        notifier.notifyListeners("等待扫码"+times);
                         break;
                     case "Scanned":
-                        notifier.notifyListeners("等待确认");
+                        notifier.notifyListeners("等待确认"+times);
                         break;
                     case "Confirmed":
                         notifier.notifyListeners("登录成功");

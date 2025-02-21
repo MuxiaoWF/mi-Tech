@@ -12,13 +12,13 @@
 
 本项目包含获取stoken等参数，获取原神和绝区零（国服）的抽卡记录，获取米游社相关（游戏体力，每日任务（签到），获取文章等）  
 有关验证码自动过码请参考项目 [luguoyixiazi/test_nine](https://github.com/luguoyixiazi/test_nine)
-，同时将 [此处方法 getPassChallenge](src/main/java/com/muxiao/bbs_daily.java#L200)
+，同时将 [此处方法进行修改 getPassChallenge](src/main/java/com/muxiao/bbs_daily.java#L200)
 
 | 九宫格验证码            | 点选验证码            |
 |-------------------|------------------|
 | ![九宫格](pic/2.jpg) | ![点选](pic/1.jpg) |
 
-本项目验证码均可通过打开本地网址(http://127.0.0.1:8080/verify-geetest.html)通过后继续使用
+本项目验证码均可通过打开本地网址 http://127.0.0.1:8080/verify-geetest.html 通过后继续使用
 
 - [ ] 完成图片类型的输出
 
@@ -96,12 +96,12 @@ public static void main(String[] args) {
 import com.muxiao.get_url;
 
 public static void main(String[] args) {
-    String url = get_url.genshin("your_stoken", "your_mid");
-    //String url = get_url.zzz("your_stoken", "your_mid");
+    String url = get_url.genshin("your_stoken", "your_mid").toString();
+    //String url = get_url.zzz("your_stoken", "your_mid").toString;
     System.out.println(url);
     //若使用本软件调用的登录方法，则不需要传入stoken和mid，会自动从保存文件中获取
-    String url = get_url.genshin();
-    //String url = get_url.zzz();
+    String url = get_url.genshin().toString();
+    //String url = get_url.zzz().toString;
     System.out.println(url);
 }
 ```

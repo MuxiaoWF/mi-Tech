@@ -748,6 +748,12 @@ public class bbs_daily {
                 }
                 if (data.get("retcode").getAsInt() == 0 && data.getAsJsonObject("data").get("success").getAsInt() != 0 && i < retries) {
                     statusNotifier.notifyListeners("请打开网页：http://127.0.0.1:8080/verify-geetest.html 通过验证码(如无法正常显示请刷新并检查网络链接)");
+                    record_headers.put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
+                            + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
+                            +";account_id=" + tools.files.read().get("stuid")
+                            + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
+                            + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
+                            + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
                     String[] temp = bbs_daily.getPassChallenge(record_headers);
                     if (temp != null) {
                         String validate = temp[1];

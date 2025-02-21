@@ -69,15 +69,7 @@ class fixed {
                 put("forumId", "57");
                 put("name", "绝区零");
             }}));
-    protected static String name_to_game_num_id(String game_name){
-        for(Map<String,String> map: bbs_list){
-            if(map.get("name").equals(game_name)){
-                return map.get("id");
-            }
-        }
-        return null;
-    }
-    protected static final String deviceId = getDeviceId(tools.files.read().get("device_name_space"), tools.files.read().get("device_name"));
+    protected static final String deviceId = getDeviceId(tools.files.read_global().get("device_name_space"), tools.files.read_global().get("device_name"));
     private static final Map<String, String> name_to_game_id = new HashMap<>() {{
         put("崩坏2", "bh2_cn");
         put("崩坏3", "bh3_cn");
@@ -90,72 +82,12 @@ class fixed {
     private static final String user_agent = "Mozilla/5.0 (Linux; Android 12; mi-Tech) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.129 Mobile Safari/537.36 miHoYoBBS/" + bbs_version;
     protected static final Map<String, String> fp_headers = new HashMap<>() {{
         put("User-Agent", user_agent);
-        put("x-rpc-app_version",bbs_version);
-        put("x-rpc-client_type","5");
-        put("Referer","https://webstatic.mihoyo.com/");
-        put("Origin","https://webstatic.mihoyo.com/");
+        put("x-rpc-app_version", bbs_version);
+        put("x-rpc-client_type", "5");
+        put("Referer", "https://webstatic.mihoyo.com/");
+        put("Origin", "https://webstatic.mihoyo.com/");
         put("Content-Type", "application/json; utf-8");
         put("Accept-Language", "zh-CN,zh-Hans;q=0.9");
-    }};
-    protected static Map<String, String> captcha_headers = new HashMap<>() {{
-        put("x-rpc-account_version", "2.20.1");
-        put("x-rpc-app_id", app_id);
-        put("x-rpc-device_name", "mi-Tech-Device");
-        put("x-rpc-device_fp", getFp());
-        put("x-rpc-app_version", bbs_version);
-        put("ds", getDS(K2));
-        put("x-rpc-client_type", "2");
-        put("x-rpc-device_id", deviceId);
-        put("x-rpc-sdk_version", "2.20.1");
-        put("x-rpc-sys_version", "14");
-        put("x-rpc-game_biz", "bbs_cn");
-        put("Content-Type", "application/json; utf-8");
-    }};
-    protected static final Map<String, String> record_headers = new HashMap<>() {{
-        put("x-rpc-client_type", "5");
-        put("DS", "");
-        put("User-Agent", user_agent);
-        put("X-Request-With", "com.mihoyo.hyperion");
-        put("Origin", "https://webstatic.mihoyo.com");
-        put("Referer", "https://webstatic.mihoyo.com/");
-        put("x-rpc-device_fp", getFp());
-        put("x-rpc-device_id", deviceId);
-        put("x-rpc-app_version", bbs_version);
-        put("x-rpc-device_name", "mi-Tech-Device");
-        put("x-rpc-page", "v5.3.2-gr-cn_#/ys");
-        put("x-rpc-tool_version", "v5.3.2-gr-cn");
-        put("sec-fetch-site", "same-site");
-        put("sec-fetch-mode", "cors");
-        put("sec-fetch-dest", "empty");
-        put("accept-encoding", "gzip, deflate, br");
-        put("accept", "*/*");
-        put("accept-language", "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6");
-        put("x-rpc-sys_version", "14");
-        put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
-                + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
-                +";account_id=" + tools.files.read().get("stuid")
-                + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
-                + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
-                + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
-    }};
-    protected static final Map<String, String> widget_headers = new HashMap<>() {{
-        put("x-rpc-client_type", "2");
-        put("DS", getDS(K2));
-        put("x-rpc-app_version", bbs_version);
-        put("x-rpc-device_id", deviceId);
-        put("x-rpc-sys_version", "14");
-        put("x-rpc-device_name", "mi-Tech-Device");
-        put("x-rpc-device_model", "mi-Tech");
-        put("x-rpc-device_fp", getFp());
-        put("x-rpc-channel", "miyousheluodi");
-        put("Referer", "https://app.mihoyo.com");
-        put("cookie", "");
-        put("x-rpc-h256_supported", "1");
-        put("x-rpc-verify_key", app_id);
-        put("x-rpc-csm_source","home");
-        put("User-Agent", user_agent);
-        put("Connection", "Keep-Alive");
-        put("Accept-Encoding", "gzip");
     }};
     protected static final Map<String, String> authkey_headers = new java.util.HashMap<>() {{
         put("Cookie", "");
@@ -215,17 +147,6 @@ class fixed {
         put("x-rpc-device_id", deviceId);
         put("x-rpc-app_id", app_id);
     }};
-    protected static final Map<String, String> user_game_roles_stoken_headers = new HashMap<>() {{
-        put("x-rpc-client_type", "2");
-        put("Accept-Encoding", "gzip, deflate, br");
-        put("x-rpc-device_id", deviceId);
-        put("x-rpc-device_fp", getFp());
-        put("x-rpc-verify_key", app_id);
-        put("User-Agent", user_agent);
-        put("x-rpc-app_version", bbs_version);
-        put("DS", getDS(K2));
-        put("Cookie", "");
-    }};
     protected static final Map<String, String> gameToken_headers = new HashMap<>() {{
         put("x-rpc-app_version", bbs_version);
         put("DS", "");
@@ -241,6 +162,74 @@ class fixed {
         put("x-rpc-client_type", "4");
         put("User-Agent", user_agent);
     }};
+    protected static String publicKeyString = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDvekdPMHN3AYhm/vktJT+YJr7cI5DcsNKqdsx5DZX0gDuWFuIjzdwButrIYPNmRJ1G8ybDIF7oDW2eEpm5sMbL9zs9ExXCdvqrn51qELbqj0XxtMTIpaCHFSI50PfPpTFV9Xt/hmyVwokoOXFlAEgCn+QCgGs52bFoYMtyi+xEQIDAQAB";
+    private static String seedId;
+    private static String seedTime;
+    protected static Map<String, String> captcha_headers = new HashMap<>() {{
+        put("x-rpc-account_version", "2.20.1");
+        put("x-rpc-app_id", app_id);
+        put("x-rpc-device_name", "mi-Tech-Device");
+        put("x-rpc-device_fp", getFp());
+        put("x-rpc-app_version", bbs_version);
+        put("ds", getDS(K2));
+        put("x-rpc-client_type", "2");
+        put("x-rpc-device_id", deviceId);
+        put("x-rpc-sdk_version", "2.20.1");
+        put("x-rpc-sys_version", "14");
+        put("x-rpc-game_biz", "bbs_cn");
+        put("Content-Type", "application/json; utf-8");
+    }};
+    protected static final Map<String, String> record_headers = new HashMap<>() {{
+        put("x-rpc-client_type", "5");
+        put("DS", "");
+        put("User-Agent", user_agent);
+        put("X-Request-With", "com.mihoyo.hyperion");
+        put("Origin", "https://webstatic.mihoyo.com");
+        put("Referer", "https://webstatic.mihoyo.com/");
+        put("x-rpc-device_fp", getFp());
+        put("x-rpc-device_id", deviceId);
+        put("x-rpc-app_version", bbs_version);
+        put("x-rpc-device_name", "mi-Tech-Device");
+        put("x-rpc-page", "v5.3.2-gr-cn_#/ys");
+        put("x-rpc-tool_version", "v5.3.2-gr-cn");
+        put("sec-fetch-site", "same-site");
+        put("sec-fetch-mode", "cors");
+        put("sec-fetch-dest", "empty");
+        put("accept-encoding", "gzip, deflate, br");
+        put("accept", "*/*");
+        put("accept-language", "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6");
+        put("x-rpc-sys_version", "14");
+    }};
+    protected static final Map<String, String> widget_headers = new HashMap<>() {{
+        put("x-rpc-client_type", "2");
+        put("DS", getDS(K2));
+        put("x-rpc-app_version", bbs_version);
+        put("x-rpc-device_id", deviceId);
+        put("x-rpc-sys_version", "14");
+        put("x-rpc-device_name", "mi-Tech-Device");
+        put("x-rpc-device_model", "mi-Tech");
+        put("x-rpc-device_fp", getFp());
+        put("x-rpc-channel", "miyousheluodi");
+        put("Referer", "https://app.mihoyo.com");
+        put("cookie", "");
+        put("x-rpc-h256_supported", "1");
+        put("x-rpc-verify_key", app_id);
+        put("x-rpc-csm_source", "home");
+        put("User-Agent", user_agent);
+        put("Connection", "Keep-Alive");
+        put("Accept-Encoding", "gzip");
+    }};
+    protected static final Map<String, String> user_game_roles_stoken_headers = new HashMap<>() {{
+        put("x-rpc-client_type", "2");
+        put("Accept-Encoding", "gzip, deflate, br");
+        put("x-rpc-device_id", deviceId);
+        put("x-rpc-device_fp", getFp());
+        put("x-rpc-verify_key", app_id);
+        put("User-Agent", user_agent);
+        put("x-rpc-app_version", bbs_version);
+        put("DS", getDS(K2));
+        put("Cookie", "");
+    }};
     protected final static Map<String, String> password_headers = new HashMap<>() {{
         put("User-Agent", user_agent);
         put("x-rpc-account_version", "2.20.1");
@@ -255,7 +244,15 @@ class fixed {
         put("x-rpc-sys_version", "14");
         put("x-rpc-game_biz", "bbs_cn");
     }};
-    protected static String publicKeyString = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDvekdPMHN3AYhm/vktJT+YJr7cI5DcsNKqdsx5DZX0gDuWFuIjzdwButrIYPNmRJ1G8ybDIF7oDW2eEpm5sMbL9zs9ExXCdvqrn51qELbqj0XxtMTIpaCHFSI50PfPpTFV9Xt/hmyVwokoOXFlAEgCn+QCgGs52bFoYMtyi+xEQIDAQAB";
+
+    protected static String name_to_game_num_id(String game_name) {
+        for (Map<String, String> map : bbs_list) {
+            if (map.get("name").equals(game_name)) {
+                return map.get("id");
+            }
+        }
+        return null;
+    }
 
     /**
      * 获取游戏id（game_biz），可输入崩坏2、原神、崩坏3、绝区零、星铁、绝区零
@@ -342,8 +339,6 @@ class fixed {
         tools.files.write("cookie_token", res.get("data").getAsJsonObject().get("cookie_token").getAsString());
         return res.get("data").getAsJsonObject().get("cookie_token").getAsString();
     }
-    private static String seedId;
-    private static String seedTime;
 
     /**
      * 获取device_fp

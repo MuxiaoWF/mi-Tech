@@ -42,6 +42,12 @@ public class user_info {
             put("role_id", role_id);
             put("server", region);
         }};
+        record_headers.put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
+                + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
+                + ";account_id=" + tools.files.read().get("stuid")
+                + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
+                + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
+                + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
         record_headers.put("DS", getDS2("", SALT_4X, "role_id=" + role_id + "&server=" + region));
         return sendGetRequest(url, record_headers, params);
     }
@@ -64,6 +70,12 @@ public class user_info {
     }
 
     private static JsonObject captcha(JsonObject res, String url, String game_name) {
+        record_headers.put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
+                + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
+                + ";account_id=" + tools.files.read().get("stuid")
+                + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
+                + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
+                + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
         if (res.get("retcode").getAsInt() == 1034) {
             record_headers.put("x-rpc-challenge_path", url);
             record_headers.put("x-rpc-challenge_game", name_to_game_num_id(game_name));
@@ -92,6 +104,12 @@ public class user_info {
      * @return List&lt Map &lt String, String&gt&gt 包含nickname和level
      */
     private static List<Map<String, String>> get_user_game_role(String game_biz) {
+        record_headers.put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
+                + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
+                + ";account_id=" + tools.files.read().get("stuid")
+                + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
+                + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
+                + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
         Map<String, String> params = new HashMap<>() {{
             put("game_biz", game_biz);
         }};
@@ -120,7 +138,12 @@ public class user_info {
      * @return String -json
      */
     public static String game_record_card() {
-        Map<String, String> record_headers = new HashMap<>(fixed.record_headers);
+        record_headers.put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
+                + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
+                + ";account_id=" + tools.files.read().get("stuid")
+                + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
+                + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
+                + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
         record_headers.put("x-rpc-platform", "2");
         Map<String, String> params = new HashMap<>() {{
             put("uid", tools.files.read().get("stuid"));
@@ -161,6 +184,12 @@ public class user_info {
          * @return List -String
          */
         public static List<String> world() {
+            record_headers.put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
+                    + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
+                    + ";account_id=" + tools.files.read().get("stuid")
+                    + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
+                    + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
+                    + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
             if (no_has_role("原神"))
                 return List.of("当前账号无角色");
             List<Map<String, String>> genshins = tools.files.read(name_to_game_id("原神"));
@@ -406,6 +435,12 @@ public class user_info {
          * @return String
          */
         public static String calendar() {
+            record_headers.put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
+                    + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
+                    + ";account_id=" + tools.files.read().get("stuid")
+                    + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
+                    + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
+                    + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
             List<Map<String, String>> genshins = tools.files.read(name_to_game_id("原神"));
             Map<String, String> genshin = genshins.getFirst();
             String role_id = genshin.get("game_uid");
@@ -414,7 +449,6 @@ public class user_info {
                 put("role_id", role_id);
                 put("server", region);
             }};
-            Map<String, String> record_headers = new HashMap<>(fixed.record_headers);
             record_headers.put("DS", getDS2("", SALT_4X, "role_id=" + role_id + "&server=" + region));
             String response = sendPostRequest("https://api-takumi-record.mihoyo.com/game_record/app/genshin/api/act_calendar", record_headers, params);
             JsonObject jsonObject = JsonParser.parseString(response).getAsJsonObject();
@@ -730,10 +764,15 @@ public class user_info {
          * @return String的List-防止多用户
          */
         public static List<String> month_info(int month) {
+            record_headers.put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
+                    + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
+                    + ";account_id=" + tools.files.read().get("stuid")
+                    + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
+                    + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
+                    + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
             if (no_has_role("原神"))
                 return List.of("当前账号无角色");
             List<Map<String, String>> genshins = tools.files.read(name_to_game_id("原神"));
-            Map<String, String> record_headers = new HashMap<>(fixed.record_headers);
             List<String> responses = new ArrayList<>();
             for (Map<String, String> genshin : genshins) {
                 Map<String, String> params = new HashMap<>() {{
@@ -807,6 +846,12 @@ public class user_info {
          * @return String的List - 防止多用户
          */
         public static List<String> character_list() {
+            record_headers.put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
+                    + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
+                    + ";account_id=" + tools.files.read().get("stuid")
+                    + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
+                    + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
+                    + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
             List<Map<String, String>> users = get_user_game_role(fixed.name_to_game_id("原神"));
             if (no_has_role("原神"))
                 return List.of("当前账号无角色");
@@ -839,6 +884,12 @@ public class user_info {
          * @return String
          */
         public static String character_info(String uid, String server, int[] character_ids) {
+            record_headers.put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
+                    + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
+                    + ";account_id=" + tools.files.read().get("stuid")
+                    + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
+                    + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
+                    + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
             Map<String, Object> body = new HashMap<>() {{
                 put("server", server);
                 put("character_ids", character_ids);
@@ -1328,10 +1379,15 @@ public class user_info {
          * @return String的List-防止多用户
          */
         public static List<String> month_info(int month) {
+            record_headers.put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
+                    + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
+                    + ";account_id=" + tools.files.read().get("stuid")
+                    + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
+                    + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
+                    + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
             if (no_has_role("崩坏：星穹铁道"))
                 return List.of("当前账号无角色");
             List<Map<String, String>> hkrpgs = tools.files.read(name_to_game_id("星铁"));
-            Map<String, String> record_headers = new HashMap<>(fixed.record_headers);
             List<String> responses = new ArrayList<>();
             for (Map<String, String> hkrpg : hkrpgs) {
                 Map<String, String> params = new HashMap<>() {{
@@ -1399,6 +1455,12 @@ public class user_info {
          * @return String的List - 防止多用户
          */
         public static List<String> character_list() {
+            record_headers.put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
+                    + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
+                    + ";account_id=" + tools.files.read().get("stuid")
+                    + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
+                    + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
+                    + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
             List<Map<String, String>> users = get_user_game_role(fixed.name_to_game_id("星铁"));
             if (no_has_role("崩坏：星穹铁道"))
                 return List.of("当前账号无角色");
@@ -1431,6 +1493,12 @@ public class user_info {
          * @return String
          */
         public static String character_info(String uid, String server) {
+            record_headers.put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
+                    + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
+                    + ";account_id=" + tools.files.read().get("stuid")
+                    + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
+                    + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
+                    + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
             Map<String, String> body = new HashMap<>() {{
                 put("need_wiki", "false");
                 put("role_id", uid);
@@ -1510,10 +1578,15 @@ public class user_info {
          * @return String的List-防止多用户
          */
         public static List<String> mem(int month) {
+            record_headers.put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
+                    + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
+                    + ";account_id=" + tools.files.read().get("stuid")
+                    + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
+                    + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
+                    + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
             if (no_has_role("绝区零"))
                 return List.of("当前账号无角色");
             List<Map<String, String>> zzzs = tools.files.read(name_to_game_id("绝区零"));
-            Map<String, String> record_headers = new HashMap<>(fixed.record_headers);
             record_headers.put("x-rpc-platform", "2");
             List<String> responses = new ArrayList<>();
             for (Map<String, String> zzz : zzzs) {
@@ -1536,10 +1609,15 @@ public class user_info {
          */
 
         public static List<String> challenge(int month) {
+            record_headers.put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
+                    + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
+                    + ";account_id=" + tools.files.read().get("stuid")
+                    + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
+                    + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
+                    + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
             if (no_has_role("绝区零"))
                 return List.of("当前账号无角色");
             List<Map<String, String>> zzzs = tools.files.read(name_to_game_id("绝区零"));
-            Map<String, String> record_headers = new HashMap<>(fixed.record_headers);
             record_headers.put("x-rpc-platform", "2");
             List<String> responses = new ArrayList<>();
             for (Map<String, String> zzz : zzzs) {
@@ -1564,19 +1642,14 @@ public class user_info {
             if (no_has_role("绝区零"))
                 return List.of("当前账号无角色");
             List<Map<String, String>> zzzs = tools.files.read(name_to_game_id("绝区零"));
-            Map<String, String> record_headers = new HashMap<>(fixed.record_headers);
             record_headers.put("x-rpc-platform", "2");
             List<String> responses = new ArrayList<>();
             for (Map<String, String> zzz : zzzs) {
-                Map<String, String> params = new HashMap<>() {{
-                    put("role_id", zzz.get("game_uid"));
-                    put("server", zzz.get("region"));
-                }};
                 String response;
                 if (type == 1)
-                    response = sendGetRequest("https://api-takumi-record.mihoyo.com/event/game_record_zzz/api/zzz/abyss_abstract", record_headers, params);
+                    response = getResponse(zzz,"https://api-takumi-record.mihoyo.com/event/game_record_zzz/api/zzz/abyss_abstract");
                 else
-                    response = sendGetRequest("https://api-takumi-record.mihoyo.com/event/game_record_zzz/api/zzz/abysss2_abstract", record_headers, params);
+                    response = getResponse(zzz,"https://api-takumi-record.mihoyo.com/event/game_record_zzz/api/zzz/abysss2_abstract");
                 responses.add(response);
             }
             return responses;
@@ -1589,10 +1662,15 @@ public class user_info {
          * @return String的List-防止多用户
          */
         public static List<String> month_info(int month) {
+            record_headers.put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
+                    + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
+                    + ";account_id=" + tools.files.read().get("stuid")
+                    + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
+                    + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
+                    + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
             if (no_has_role("绝区零"))
                 return List.of("当前账号无角色");
             List<Map<String, String>> zzzs = tools.files.read(name_to_game_id("绝区零"));
-            Map<String, String> record_headers = new HashMap<>(fixed.record_headers);
             List<String> responses = new ArrayList<>();
             for (Map<String, String> zzz : zzzs) {
                 Map<String, String> params = new HashMap<>() {{
@@ -1802,11 +1880,7 @@ public class user_info {
                 return List.of("当前账号无角色");
             List<String> responses = new ArrayList<>();
             for (Map<String, String> user : users) {
-                Map<String, String> body = new HashMap<>() {{
-                    put("server", user.get("region"));
-                    put("role_id", user.get("game_uid"));
-                }};
-                String response = sendGetRequest("https://api-takumi-record.mihoyo.com/event/game_record_zzz/api/zzz/avatar/basic", record_headers, body);
+                String response = getResponse(user,"https://api-takumi-record.mihoyo.com/event/game_record_zzz/api/zzz/avatar/basic");
                 JsonObject jsonObject = JsonParser.parseString(response).getAsJsonObject();
                 jsonObject = captcha(jsonObject, "https://api-takumi-record.mihoyo.com/event/game_record_zzz/api/zzz/avatar/basic", "绝区零");
                 jsonObject.getAsJsonObject("data").addProperty("uid", user.get("game_uid"));
@@ -1828,6 +1902,12 @@ public class user_info {
          * @return String
          */
         public static String character_info(String uid, String server, int character_id) {
+            record_headers.put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
+                    + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
+                    + ";account_id=" + tools.files.read().get("stuid")
+                    + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
+                    + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
+                    + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
             Map<String, String> body = new HashMap<>() {{
                 put("server", server);
                 put("need_wiki", "false");
@@ -1852,6 +1932,12 @@ public class user_info {
          * @return String的List-防止多用户
          */
         public static List<String> month_info(int month) {
+            record_headers.put("Cookie", "ltuid=" + tools.files.read().get("stuid") + ";ltoken=" + tools.files.read().get("stoken")
+                    + ";ltoken_v2=" + tools.files.read().get("stoken") + ";ltuid_v2=" + tools.files.read().get("stuid")
+                    + ";account_id=" + tools.files.read().get("stuid")
+                    + ";account_id_v2=" + tools.files.read().get("stuid") + ";ltuid=" + tools.files.read().get("stuid")
+                    + ";account_mid_v2=" + tools.files.read().get("mid") + ";cookie_token=" + tools.files.read().get("cookie_token")
+                    + ";cookie_token_v2=" + tools.files.read().get("cookie_token") + ";mi18nLang=zh-cn;login_ticket=" + tools.files.read().get("login_ticket"));
             if (no_has_role("崩坏3"))
                 return List.of("当前账号无角色");
             List<Map<String, String>> bh3s = tools.files.read(name_to_game_id("崩坏3"));
