@@ -579,15 +579,21 @@ public class bbs_daily {
             }
         }
 
+        private static int temp = 0;
         /**
          * 更新cookie_token
          */
         private static String updateCookieToken() {
-            statusNotifier.notifyListeners("CookieToken失效，尝试刷新");
-            String newToken = getCookieTokenByStoken();
-            statusNotifier.notifyListeners("CookieToken刷新成功");
-            tools.files.write("cookie_token", newToken);
-            return newToken;
+            if(temp < 3){
+                temp++;
+                statusNotifier.notifyListeners("CookieToken失效，尝试刷新");
+                String newToken = getCookieTokenByStoken();
+                statusNotifier.notifyListeners("CookieToken刷新成功");
+                tools.files.write("cookie_token", newToken);
+                return newToken;
+            }else {
+                throw new RuntimeException("CookieToken刷新失败");
+            }
         }
 
         /**
@@ -697,6 +703,8 @@ public class bbs_daily {
                     game_login_headers_this.put("Cookie", new_cookie);
                     return isSign(region, uid, true);
                 }
+                if(data.get("retcode").getAsInt() == -100)
+                    return isSign(region, uid, false);
                 throw new RuntimeException("BBS Cookie Errror" + "获取账号签到信息失败！" + response);
             }
             Map<String, Object> resultMap = new HashMap<>();

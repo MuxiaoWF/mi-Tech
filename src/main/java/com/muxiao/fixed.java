@@ -13,8 +13,8 @@ import static com.muxiao.tools.sendGetRequest;
 class fixed {
     protected static final String SALT_6X = "t0qEgfub6cvueAPgR5m9aQWWVciEer7v";
     protected static final String SALT_4X = "xV8v4Qu54lUKrEYFZkJhB8cuOh9Asafs";
-    protected static final String LK2 = "dp8QUFKPYSOzIokdsW9mkxSLyA2FtF8y";
-    protected static final String K2 = "wpa5R56uuMIZBQ2i31fi0gfAQY7ehLiV";
+    protected static final String LK2 = "IDMtPWQJfBCJSLOFxOlNjiIFVasBLttg";
+    protected static final String K2 = "aApXDrhCxFhZkKZQVWWyfoAlyHTlJkis";
 
     protected static final String Honkai2_act_id = "e202203291431091";
     protected static final String Honkai3rd_act_id = "e202306201626331";
@@ -78,7 +78,7 @@ class fixed {
         put("星铁", "hkrpg_cn");
         put("绝区零", "nap_cn");
     }};
-    private static final String bbs_version = "2.83.1";
+    private static final String bbs_version = "2.92.0";
     private static final String user_agent = "Mozilla/5.0 (Linux; Android 12; mi-Tech) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.129 Mobile Safari/537.36 miHoYoBBS/" + bbs_version;
     protected static final Map<String, String> fp_headers = new HashMap<>() {{
         put("User-Agent", user_agent);
